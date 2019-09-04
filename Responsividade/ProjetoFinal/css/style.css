@@ -1,0 +1,447 @@
+/*
+|--------------------------------------------------------------------------
+| Estilos genéricos
+|--------------------------------------------------------------------------
+*/
+
+@font-face {
+font-family: 'estrangelo_edessaregular';
+font-style: normal;
+font-weight: normal;
+src: url('../fonts/estre-webfont.eot');
+src: url('../fonts/estre-webfont.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/estre-webfont.woff') format('woff'),
+     url('../fonts/estre-webfont.ttf') format('truetype'),
+     url('../fonts/estre-webfont.svg#estrangelo_edessaregular') format('svg');
+}
+
+body {
+/* http://www.w3.org/TR/CSS21/generate.html */
+counter-reset: steps-number;
+
+/* http://forums.realmacsoftware.com/discussion/comment/229113/#Comment_229113 */
+background-attachment: fixed;
+background-color: #FF6D00;
+background-image: url(../img/tunnel.png), url(../img/bolinhas.png), -webkit-gradient(radial, 50% -5%,0,50% 0%,200, from(rgba(255, 110, 0, .8)), to(#FFFF00));
+background-image: url(../img/tunnel.png), url(../img/bolinhas.png), -webkit-radial-gradient(50% -5%, #FFFF00, rgba(255, 110, 0, .8));
+background-image: url(../img/tunnel.png), url(../img/bolinhas.png), -moz-radial-gradient(50% -5%, #FFFF00, rgba(255, 110, 0, .8));
+background-image: url(../img/tunnel.png), url(../img/bolinhas.png), -ms-radial-gradient(50% -5%, #FFFF00, rgba(255, 110, 0, .8));
+background-image: url(../img/tunnel.png), url(../img/bolinhas.png), -o-radial-gradient(50% -5%, #FFFF00, rgba(255, 110, 0, .8));
+background-image: url(../img/tunnel.png), url(../img/bolinhas.png), radial-gradient(50% -5%, #FFFF00, rgba(255, 110, 0, .8));
+background-position: center 0;
+background-repeat: no-repeat;
+}
+
+embed,
+iframe,
+img,
+object,
+video {
+height: auto;
+max-width: 100%;
+}
+
+/* http://bernarddeluna.com/xhtml/nunca-mais-use-br-clear-ou-div-clear-faca-como-a-web-evolua/ */
+div:after,
+dl:after,
+form:after,
+ol:after,
+ul:after {
+clear: both;
+content: ".";
+display: block;
+height: 0;
+overflow: hidden;
+visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Estilos comuns
+|--------------------------------------------------------------------------
+*/
+
+.headline {
+margin: 2.0833333333% 0 2.5% 0; /* (25 0 30 0) / 1200 */
+}
+
+	.nir {
+	height: 150px;
+	margin: 10px 0 0 0;
+	overflow: hidden;
+	padding: 0;
+	text-align: center;
+	}
+
+	.nir:before {
+	content: url(../img/chamada-p.png);
+	display: block;
+	}
+
+/* http://css-tricks.com/centering-in-the-unknown/#comment-118663 */
+.ipad {
+bottom: 0;
+display: block;
+height: 395px;
+left: 0;
+width: 287px;
+}
+
+.steps {
+float: left;
+font-size: 1.7em;
+padding: 0;
+}
+
+	.steps-items {
+	padding: 0;
+	}
+
+		.step {
+		display: block;
+		height: 65px;
+		letter-spacing: -2px;
+		margin: 20px 0;
+		position: relative;
+		width: 285px;
+		}
+
+			.step-number {
+			color: rgba(135,70,185, 0.8);
+			font-size: 2em;
+			left: 15px;
+			position: absolute;
+			text-shadow: 1px 1px 2px #D2ACEF, 0 0 0 #000;
+			top: 5px;
+			}
+
+				.step-number:before {
+				content: counter(steps-number);
+				counter-increment: steps-number;
+				}
+
+			.step-text {
+			position: absolute;
+			right: 20px;
+			top: 2px;
+			}
+
+		.step-2 {
+		box-sizing: border-box;
+		color: #F4E6FF;
+		font-family: estrangelo_edessaregular;
+		left: 15px;
+		line-height: 100%;
+		padding-left: 40px;
+		top: 6px;
+		}
+
+			.step-2 .step-number {
+			left: 0;
+			line-height: 100%;
+			}
+
+	.button {
+	background-color: #9A50D3;
+	background-image: -webkit-linear-gradient(top, #D2ACEF 20%, #9B50D2 100%);
+	background-image:    -moz-linear-gradient(top, #D2ACEF 20%, #9B50D2 100%);
+	background-image:     -ms-linear-gradient(top, #D2ACEF 20%, #9B50D2 100%);
+	background-image:      -o-linear-gradient(top, #D2ACEF 20%, #9B50D2 100%);
+	background-image:         linear-gradient(top, #D2ACEF 20%, #9B50D2 100%);
+	-webkit-border-radius: 10px;
+	  -moz-border-radius: 10px;
+	       border-radius: 10px;
+	-webkit-box-shadow: 4px 4px 10px -2px rgba(42, 7, 69, 0.6), 0px -2px 6px 3px rgba(210,183,232,0.5) inset;
+	  -moz-box-shadow: 4px 4px 10px -2px rgba(42, 7, 69, 0.6), 0px -2px 6px 3px rgba(210,183,232,0.5) inset;
+	       box-shadow: 4px 4px 10px -2px rgba(42, 7, 69, 0.6), 0px -2px 6px 3px rgba(210,183,232,0.5) inset;
+	color: #F5E6FF;
+	display: block;
+	font-family: estrangelo_edessaregular;
+	height: 65px;
+	line-height: 65px;
+	text-align: right;
+	text-decoration: none;
+	}
+
+.who-danced {
+font-family: estrangelo_edessaregular;
+}
+
+	.who-danced-title {
+	color: #F4E6FF;
+	font-size: 1.8em;
+	letter-spacing: -2px;
+	margin-bottom: -10px;
+	}
+
+.videos {
+padding: 0;
+}
+
+	.video {
+	display: inline-block;
+	height: 43px;
+	margin: 5px;
+	width: 76px;
+	}
+
+.videos-pagination {
+padding: 0;
+text-align: center;
+}
+
+	.videos-pagination-page {
+	display: inline;
+	}
+
+		.videos-pagination-trigger {
+		background-color: #8947BB;
+		border: 1px solid transparent;
+		-webkit-border-radius: 50%;
+  		   -moz-border-radius: 50%;
+       	        border-radius: 50%;
+        display: inline-block;
+        height: 10px;
+        margin: 0 5px;
+        padding: 3px;
+        text-align: right;
+        width: 10px;
+		}
+
+			.videos-pagination-trigger-selected {
+			border-color: #F4E6FF;
+			}
+
+
+
+
+
+
+
+
+
+
+/*
+|--------------------------------------------------------------------------
+| @media screen and (max-width: 767px)
+|--------------------------------------------------------------------------
+*/
+
+@media screen and (max-width: 767px) {
+
+	.steps {
+	margin: 2.25% 0 0 10px;
+	width: 95%;
+	}
+
+		.steps-items {
+		margin: 0 auto;
+		padding: 0;
+		width: 285px;
+		}
+
+		.who-danced {
+		text-align: center;
+		}
+
+			.who-danced-title {
+			float: left;
+			margin: 20px 0 5px 0;
+			width: 100%;
+			}
+	
+	.ipad {
+	margin: 0 auto;
+	right: 0;
+	top: 0;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+/*
+|--------------------------------------------------------------------------
+| @media screen and (min-width: 768px)
+|--------------------------------------------------------------------------
+*/
+
+@media screen and (min-width: 768px) {
+
+	.nir {
+	height: 190px;
+	margin: 0;
+	}
+
+		.nir:before {
+		content: url(../img/chamada.png);
+		}
+
+	.ipad {
+	float: left;
+	margin-left: 10%;
+	}
+
+	.steps {
+	margin-top: 8%;
+	position: absolute;
+	right: 10%;
+	vertical-align: middle;
+	}
+
+	.who-danced {
+	float: left;
+	margin-left: 10px;
+	width: 95%;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+/*
+|--------------------------------------------------------------------------
+| @media screen and (min-width: 1024px)
+|--------------------------------------------------------------------------
+*/
+
+@media screen and (min-width: 1024px) {
+
+	.wrapper {
+	margin :0 auto;
+	max-width: 1200px;
+	position: relative;
+	}
+
+		.nir {
+		height: 190px;
+		margin: 0;
+		}
+
+			.nir:before {
+			content: url(../img/chamada.png);
+			}
+		
+		.ipad {
+		margin: auto;
+		position: absolute;
+		right: 6%;
+		}
+
+		.steps {
+		margin: 2.25% 0 0 10px;
+		position: relative;
+		right: 0;
+		}
+
+			.step {
+			margin: 40px 0;
+			}
+
+			.button {
+			-webkit-transition: all .1s; 
+		   	   -moz-transition: all .1s; 
+		        -ms-transition: all .1s;
+		         -o-transition: all .1s; 
+		            transition: all .1s;
+			}
+
+				.button:hover {
+				-webkit-box-shadow: 4px 4px 8px 0px rgba(42,7,69,0.3), 0px -2px 6px 3px rgba(210,183,232,0.5) inset;
+				   -moz-box-shadow: 4px 4px 8px 0px rgba(42,7,69,0.3), 0px -2px 6px 3px rgba(210,183,232,0.5) inset;
+				        box-shadow: 4px 4px 8px 0px rgba(42,7,69,0.3), 0px -2px 6px 3px rgba(210,183,232,0.5) inset;
+				-webkit-transform: scale(1.05);
+				   -moz-transform: scale(1.05);
+				   	-ms-transform: scale(1.05);
+				     -o-transform: scale(1.05);
+				        transform: scale(1.05);
+				}
+
+				.button:active {
+				-webkit-box-shadow: 0px -2px 6px 3px rgba(210,183,232,0.5) inset;
+				  -moz-box-shadow: 0px -2px 6px 3px rgba(210,183,232,0.5) inset;
+				       box-shadow: 0px -2px 6px 3px rgba(210,183,232,0.5) inset;
+				-webkit-transform: scale(1);
+				   -moz-transform: scale(1);
+				     -o-transform: scale(1);
+				        transform: scale(1);
+				}
+
+		.who-danced {
+		float: right;
+		width: 360px;
+		}
+
+			.who-danced-title {
+			padding-right: 10px;
+			text-align: right;
+			}
+
+				.video {
+				-webkit-transition: all .1s; 
+				   -moz-transition: all .1s; 
+				    -ms-transition: all .1s;
+				     -o-transition: all .1s; 
+				        transition: all .1s;
+				}
+
+					.video:hover {
+					-webkit-box-shadow: 1px 1px 8px 1px rgba(42, 7, 69, 0.6);
+					   -moz-box-shadow: 1px 1px 8px 1px rgba(42, 7, 69, 0.6);
+					        box-shadow: 1px 1px 8px 1px rgba(42, 7, 69, 0.6);
+					-webkit-transform: scale(1.15);
+					   -moz-transform: scale(1.15);
+					    -ms-transform: scale(1.15);
+					     -o-transform: scale(1.15);
+					        transform: scale(1.15);
+					}
+
+					.video:active {
+					-webkit-box-shadow: none;
+					   -moz-box-shadow: none;
+					        box-shadow: none;
+					-webkit-transform: scale(1);
+					   -moz-transform: scale(1);
+					    -ms-transform: scale(1);
+					     -o-transform: scale(1);
+					        transform: scale(1);
+					}
+
+			.videos-pagination {
+			margin: -10px 10px 0 0;
+			text-align: right;
+			}
+
+				.videos-pagination-trigger {
+				margin: 0 2px;
+				padding: 0;
+				}
+
+					.videos-pagination-trigger:hover {
+					border-color: #F4E6FF;
+					}
+
+}

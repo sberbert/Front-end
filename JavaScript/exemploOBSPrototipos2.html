@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Objetos - Protótipo com create</title>
+    
+    <script> 
+        
+        // criando um objeto com duas propriedades 
+        var curso = { 
+            sigla: "TI", 
+            nome: "Técnico em Informática" 
+        };
+        
+        var novo_curso = Object.create(curso);
+        
+        novo_curso.sigla = "SI"; 
+        novo_curso.nome = "Sistemas de Informação"; 
+        
+        curso.sigla = "CC"; 
+        curso.nome = "Construção Civil"; 
+        
+        // imprime SI 
+        console.log(novo_curso.sigla); 
+        
+        // imprime Sistemas de Informação
+        console.log(novo_curso.nome);        
+        
+    </script>
+    
+</head>
+<body>
+  Introdução ao Javascript  - Objetos - Protótipo com create
+</body>
+</html>

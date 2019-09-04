@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>        
+		jQuery(document).ready(function() {	
+
+		    //comentara para executar uma linha por vez ...	
+
+		    //procura o elemento mais próximo na árvore, no caso <tr>
+		    //$('td').eq(4).closest('tr').css('background', 'aquamarine'); 
+		    
+		    //pega os irmãos do elemento previamente selecionado
+		    //$('td').eq(4).siblings().css('background', 'aquamarine');
+
+			//pega o elemento seguinte ao selecionado
+		    //$('td').eq(4).next().css('background', 'aquamarine');
+
+			//pega o elemento anterior ao selecionado
+		    //$('td').eq(4).prev().css('background', 'aquamarine');
+
+            //pega todos os elementos seguintes ao selecionado (no mesmo nível, ou seja, na mesma tr)
+		    //$('td').eq(4).nextAll().css('background', 'aquamarine');
+
+            //pega todos os elementos anteriores ao selecionado (no mesmo nível, ou seja, na mesma tr)
+		    //$('td').eq(4).prevAll().css('background', 'aquamarine');
+
+			//pega a 1a linha, manda pegar todos os irmãos (next - linha 2) até encontrar a classe row3 e parar
+			//$('tr').first().nextUntil('.row3').css('background', 'aquamarine');  
+
+			//pega a 1a ultima, manda pegar todos os irmãos (prev - linha 2) até encontrar a classe row1 e parar
+			$('tr').last().prevUntil('.row1').css('background', 'aquamarine');  
+
+		}); 
+    </script>
+
+    <style type="text/css">    	
+		table, td{
+		    border: 1px solid black;
+		    text-align: center;
+		}
+
+		table{
+		    width: 100%;
+		}
+
+		td{
+		    padding: 10px;
+		}
+    </style>
+
+</head>
+
+<body>
+
+	<table>
+	    <tr class="row1">
+	        <td>1</td>
+	        <td>
+	            <b>2</b>
+	        </td>
+	        <td>3</td>
+	    </tr>
+	    <tr class="row2">
+	        <td>
+	            <b>4</b>
+	        </td>
+	        <td>5</td>
+	        <td>6</td>
+	    </tr>
+	    <tr class="row3">
+	        <td>7</td>
+	        <td>8</td>
+	        <td>9</td>
+	    </tr>
+	</table>
+   
+</body>
+
+</html>

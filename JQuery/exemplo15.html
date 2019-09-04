@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	    <meta charset="utf-8">
+		<title>JQuery</title>
+	</head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>      
+		jQuery(document).ready(function() {
+
+			/*
+			$('button').click(function() {  
+				alert("Você clicou!");
+			});
+			*/			
+
+            //desliga/remove o evento click
+			//$('button').off('click');
+
+			//ou
+
+			/* utiliza o "on" que é prefixo dos eventos para anexar o evento que vem informado dentro do () 
+			$('button').on('click', function() {  
+				alert("Você clicou!");
+			});			
+			*/
+ 
+			//adicionando um namespace para poder remover o evento apenas de quem está no mesmo namespace, pq senão, removeria todos os eventos iguais
+			/*
+			$('button').on('click.meuNameSpace', function() {  
+				alert("Você clicou!");
+			});			
+						
+
+			$('button').off('click.meuNameSpace');
+			*/
+		}); 			
+    </script>	
+
+	<body>
+
+    	<button>Clique aqui!</button>
+
+	</body>
+</html>

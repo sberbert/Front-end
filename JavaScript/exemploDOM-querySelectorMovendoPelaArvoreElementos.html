@@ -1,0 +1,48 @@
+<!-- 
+
+  - movendo-se pela árvore de elementos:
+  - document.querySelector("ul").children; -> retorna os filhos do elemento
+  - var el = document.querySelector("ul").querySelectorAll("li")[1] -> retorna o 1o li da lista selecionada
+  - el.parentElement -> retorna o ul
+  - el.nextElementSibling e el.previousElementSibling -> retorna o elemento ao lado/irmão, que seria um li
+
+-->
+
+<html>
+    
+<head>
+  <title>querySelector</title>
+</head>
+        
+<body>
+    
+  Testando querySelectorAll
+  <br>
+    
+    <ul>
+        <li>Informática</li>
+        <li>Edificações</li>
+        <li>Enfermagem</li>
+        <li>Geodésia</li>
+        <li>Qualidade</li>
+    </ul>    
+    
+    <script type="text/javascript">      
+      //retorna os filhos do elemento 
+      console.log(document.querySelector("ul").children);
+      
+      //retorna o 1o li da lista selecionada
+      var el = document.querySelector("ul").querySelectorAll("li")[1];
+      console.log(el);
+
+      //retorna o ul
+      console.log(el.parentElement);
+      
+      //retorna o elemento ao lado/irmão
+      console.log(el.nextElementSibling);
+      console.log(el.previousElementSibling);
+             
+    </script>    
+
+</body>
+</html>

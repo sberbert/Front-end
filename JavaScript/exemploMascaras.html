@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Usando máscaras com JQuery</title>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">        
+    </script>    
+ 
+    <!-- plugin baixado em https://igorescobar.github.io/jQuery-Mask-Plugin/ - descompactar e pegar arquivo min na pasta dist -->
+    <script type="text/javascript" src="jQuery/jquery.mask.min.js"></script>
+</head>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+        //simples
+        //$("input.data").mask("99/99/9999"); 
+        $("input.data").mask("99/99/9999", {placeholder: "__/__/____"});
+        $("input.cpf").mask("999.999.999-99", {reverse: true});
+        //$("input.cep").mask("99.999-999", {selectOnFocus: true});
+        $("input.cep").mask("99.999-999", {clearIfNotMatch: true});        
+    });
+    </script>  
+    
+<body>
+    
+<h1>Usando máscaras com jquery</h1>
+    
+    <label for="data">Data:</label><br>
+    <input type="text" class="data" id="data" name="data" /><br><br>
+
+    <label for="cpf">CPF:</label><br>
+    <input type="text" class="cpf" id="cpf" name="cpf" /><br><br>
+
+    <label for="cep">CEP:</label><br>
+    <input type="text" class="cep" id="cep" name="cep" /><br><br>
+    
+</body>
+</html>

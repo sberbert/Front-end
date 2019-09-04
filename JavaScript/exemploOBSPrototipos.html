@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Objetos - Protótipo com create</title>
+    
+    <script> 
+        
+        // criando um objeto com duas propriedades 
+        var curso = { 
+            sigla: "TI", 
+            nome: "Técnico em Informática" 
+        };
+        
+        // criando um objeto sem propriedades 
+        var novo_curso = {}; 
+        
+        // definindo o primeiro objeto como protótipo do segundo 
+        novo_curso = Object.create(curso); 
+        
+        // imprime TI
+        console.log(novo_curso.sigla); 
+        
+        // imprime Técnico em Informática
+        console.log(novo_curso.nome);
+        
+        
+        //*******Se uma propriedade for adicionada a um objeto, ela também será adicionada a todos os objetos queoutilizamcomoprotótipo.
+
+        //adicionando propriedades  
+        curso.carga_horaria = 36; 
+        
+        // imprime 36 
+        console.log(novo_curso.carga_horaria);
+        
+        //*******se uma propriedade for adicionada a um objeto, ela não será adicionada no protótipo desse objeto.
+        novo_curso.horasEstagio = 600; 
+        
+        // imprime undefined 
+        console.log(curso.horasEstagio);
+        
+                
+        //*****Se o valor de uma propriedade de um objeto for modiﬁcado, os objetos que o utilizam como protótipo podem ser afetados.
+        
+        curso.sigla = "SI";
+        
+        //imprime SI
+         console.log(novo_curso.sigla);
+        
+        //******* alterações nos valores das propriedades de um objeto não afetam o protótipo desse objeto.
+         novo_curso.sigla = "CC";
+        
+         //imprime SI
+         console.log(curso.sigla);
+        
+        
+    </script>
+    
+</head>
+<body>
+  Introdução ao Javascript  - Objetos - Protótipo com create
+</body>
+</html>

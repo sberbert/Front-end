@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+    
+    <script> 
+
+      function somar(valor1, valor2){
+        console.log('Quantidade de argumentos recebidos: '+arguments.length);
+        console.log('Valor do ultimo argumento: '+arguments[2]); // pega o valor do terceiro argumento
+
+        return valor1 + valor2;
+      }
+        
+        
+      console.log( somar(1,2,3) );
+        
+    </script>
+    
+</head>
+<body>
+
+  Function - repare que o último argumento foi ignorado. A function usou somente os 2 primeiros.
+
+</body>
+</html>

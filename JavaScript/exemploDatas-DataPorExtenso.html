@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Datas</title>
+
+    <style type="text/css">
+          div {
+            background-color: black;
+            width: 100%;
+            height: 30px;
+            color: white;
+            text-align: right;
+          }
+    </style>
+    
+    <script>     
+      function escreveData() {     
+
+        var hoje = new Date();  0//data atual
+        var dia = hoje.getDate();
+        var mes = hoje.getMonth();    
+        var ano = hoje.getFullYear();
+
+        var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+        var mesTexto = meses[mes];        
+
+        var diaSemana = hoje.getDay();
+        var diasSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sabado"];
+        var diaSemana = diasSemana[diaSemana];
+
+        var dataPorExtenso = diaSemana + ", " + dia +" de " + mesTexto + " de " + ano;
+
+        document.getElementById("data").innerHTML = dataPorExtenso;
+
+        if (hoje.getHours() < 18) {
+          document.getElementById("body").style.backgroundColor="yellow";
+          document.getElementById("body").style.color="red";
+        } else {
+          document.getElementById("body").style.backgroundColor= "blue";
+          document.getElementById("body").style.color="white";
+        }
+
+      }
+    </script>
+    
+</head>
+
+<body id="body" onload="escreveData();">
+
+  <div id="data"></div>   
+
+</body>
+</html>

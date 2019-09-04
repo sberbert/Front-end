@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Function - Método - Apply</title>
+    
+    <script> 
+
+      //function    
+      var deposita = function(valor) { 
+          this.saldo += valor; 
+      } 
+      
+      //objeto conta
+      var conta = { 
+          saldo: 0
+      } 
+      
+      //aplicando o método deposita ao objeto conta, do qual ele não faz parte
+      deposita.apply(conta, [200]); 
+      alert(conta.saldo);
+
+    </script>
+    
+</head>
+<body>
+
+  Function
+
+</body>
+</html>

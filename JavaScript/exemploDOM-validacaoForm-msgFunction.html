@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Validação de formulários</title>          
+</head>    
+    
+<script language="JavaScript" >
+    function enviardados() {     
+                
+        if(document.dados.tx_nome.value=="" || document.dados.tx_nome.value.length < 8) {
+            formataMsg("Preencha campo NOME corretamente!");      
+            document.dados.tx_nome.focus();
+            return false;
+        }
+
+        if( document.dados.tx_email.value=="" || document.dados.tx_email.value.indexOf('@')==-1 || document.dados.tx_email.value.indexOf('.')==-1 ) {
+            formataMsg("Preencha campo E-MAIL corretamente!");
+            document.dados.tx_email.focus();
+            return false;
+        }
+
+        if (document.dados.tx_mensagem.value=="") {
+            formataMsg("Preencha o campo MENSAGEM!");
+            document.dados.tx_mensagem.focus();
+            return false;
+        }
+
+        if (document.dados.tx_mensagem.value.length < 50 ) {
+            formataMsg("É necessario preencher o campo MENSAGEM com mais de 50 caracteres!");
+            document.dados.tx_mensagem.focus();
+            return false;
+        }
+
+    return true;
+}  
+
+function formataMsg(textoMsg) {
+  document.getElementById("msg").style.color="red"; 
+  document.getElementById("msg").innerHTML=textoMsg;
+}
+    
+</script>
+    
+<body>
+    
+<div id="msg"></div>
+
+<br>
+    
+<form action="" method="post" name="dados" onSubmit="return enviardados();" >
+    
+  Nome completo:<br>
+  <input type="text" name="tx_nome" id="tx_nome" size="52" maxlength="150">
+  
+  <br><br>
+
+  E-mail:<br>
+  <input type="text" name="tx_email" id="tx_email" size="52" maxlength="150">
+    
+  <br><br>
+    
+  Mensagem:<br>
+  <textarea name="tx_mensagem" cols="53" rows="8" id="tx_mensagem"></textarea>
+    
+  <br><br>
+     
+  <input name="Submit" type="submit"  class="formobjects" value="Enviar dados">
+  
+  <input name="Reset" type="reset" class="formobjects" value="Redefinir">
+    
+</form>
+    
+</body>
+</html>

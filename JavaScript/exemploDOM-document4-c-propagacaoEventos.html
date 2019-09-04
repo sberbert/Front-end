@@ -1,0 +1,55 @@
+<html>
+
+  <head>
+    <title>Eventos</title> 
+  </head>
+
+  <body>
+
+  	<form action="http://www.profasimone.com.br/cadastro.php" method="post">
+		<input type="text" id="myInput" name="myInput">
+		<button>Click Me</button>
+	</form>
+
+	<ul>
+		<li class="list-item">Item 1</li>
+		<li class="list-item">Item 2</li>
+		<li class="list-item">Item 3</li>
+	</ul>
+
+	<script>
+		//1-clicando em qualquer item ou nas margens anes e após os itens, o evento é disparado
+		document.querySelector('ul').addEventListener('click', 
+													  function() { 
+													    console.log(this); 
+													  } )
+
+		//2-clicando no 1o item, o evento é propagado para o elemento pai (ul) 
+		document.querySelector('li').addEventListener('click', 
+													  function() { 
+													  	console.log(this); 
+													  } )
+
+		//3-parando a propagação do evento 
+		/*document.querySelector('li').addEventListener('click', 
+													  function(event) { 
+													  	event.stopPropagation();
+													  	console.log(this); 
+													  } )		*/
+
+		//4-para não executar o comportamento padrão do submit de um form, que seria enviá-lo para processamento
+		/*document.querySelector('form').addEventListener('submit', 
+													  function(event) { 
+													  	event.preventDefault();												
+													  } )			*/
+
+		//5-para não executar o comportamento padrão do click com o botão direito no button (abertura do contextmenu)		
+		/*document.querySelector('button').addEventListener('contextmenu', 
+													  function(event) { 
+													  	event.preventDefault();
+													  	
+													  } ) */
+	</script>
+
+  </body>
+</html>

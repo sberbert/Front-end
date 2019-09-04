@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous"> 
+
+    <style type="text/css">
+    .text-centered {
+    text-align: center;
+    }
+    </style>
+    <title>Bootstrap Intermediário - Cards</title>
+  </head>
+  <body>
+
+    <!-- Barra de navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+        <a class="navbar-brand" href="#">
+          <img src="assets/img/unicamp.GIF" style="width: 30px; height: auto;" class="d-inline-block align-top">          
+          COTIL
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuSanduiche">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+ 
+        <div class="collapse navbar-collapse" id="menuSanduiche">
+          <ul class="navbar-nav mr-auto"> <!--classe mr-auto (margin-right:auto) faz o espaçamento automático entre cada item do menu -->
+
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="manual.html">Manual do Aluno</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Cursos</a>
+
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="informatica.html">Informática</a>
+                <a class="dropdown-item" href="mecanica.html">Mecânica</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="enfermagem.html">Enfermagem</a>
+                <a class="dropdown-item" href="qualidade.html">Qualidade</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="contato.html">Contato</a>
+            </li>
+
+          </ul>
+
+          <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>        
+      </div>
+
+    </nav>
+
+    <!-- Fim Barra de navegação -->   
+
+    <div class="container">
+      
+      <!-- jumbotron -->
+      <div class="jumbotron">
+        <h1 class="display-3">Trabalho de Conclusão de Curso</h1>
+        <p class="lead">Essa página contém informações sobre o TCC...</p>
+        <hr class="my-2">
+        <p>Esse é um pequeno parágrafo.</p>
+        <a href="#" class="btn btn-primary btn-lg">Clique aqui</a>
+      </div>
+      <!-- fim jumbotron  -->
+
+      <!-- imagens - usando o grid system -->
+      <div class="row">
+        <div class="col-md-4 col-sm-12 text-centered">
+          <img src="assets/img/apple-1.jpg" class="img-fluid img-thumbnail">
+          <p class="lead">Texto 1</p>
+          <p>Descrição do Texto 1</p>
+        </div>
+        <div class="col-md-4 col-sm-12 text-centered">
+          <img src="assets/img/keyboard.jpg" class="img-fluid img-thumbnail">
+          <p class="lead">Texto 2</p>
+          <p>Descrição do Texto 2</p>
+        </div>
+        <div class="col-md-4 col-sm-12 text-centered">
+          <img src="assets/img/mouse.jpg" class="img-fluid img-thumbnail">
+          <p class="lead">Texto 3</p>
+          <p>Descrição do Texto 3</p>
+        </div>
+      </div>
+      <!-- fim imagens -->
+
+      <!-- cards -->
+      <div class="jumbotron text-centered">
+        <h3 class="display-3">Depoimentos</h3>
+        
+        <!-- 1a row do card-->
+        <div class="row">
+
+          <!-- 1o card -->
+          <div class="col-md-3 col-sm-12">
+
+            <div class="card  mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Depoimento 1</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Foi legal</h6>
+                <p class="card-text">Foi muito legal! Gostei muito! Parabéns!</p>
+                <a href="#" class="card-link">Link 1</a>
+                <a href="#" class="card-link">Link 2</a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 2o card -->
+          <div class="col-md-3 col-sm-12">
+
+            <div class="card bg-danger  mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Depoimento 1</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Foi legal</h6>
+                <p class="card-text">Foi muito legal! Gostei muito! Parabéns!</p>
+                <a href="#" class="card-link">Link 1</a>
+                <a href="#" class="card-link">Link 2</a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 3o card -->
+          <div class="col-md-3 col-sm-12">
+
+            <div class="card text-white bg-primary mb-3">
+
+              <div class="card-header">Título</div>
+              <div class="card-body">
+                <h5 class="card-title">Depoimento 3</h5>
+                <p class="card-text">Muito bom!</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- 4o card -->
+          <div class="col-md-3 col-sm-12">
+
+            <div class="card border-info  mb-3">
+              <div class="card-header">Título</div>
+              <div class="card-body text-info">
+                <h5 class="card-title">Subtítulo</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+
+          </div>       
+
+        </div> <!-- end da div da 1a row -->
+        
+        <!-- 2a row do card-->   
+        <div class="row">
+
+          <!-- 1o card -->
+          <div class="col-md-3 col-sm-12">
+
+            <div class="card bg-dark text-warning mb-3">
+              <img class="card-img" src="assets/img/pessoa-1.jpg">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Título</h5>
+                <p class="card-text">oiadiasdioau oaisuiaduiasd sdhgfdhgf ijkjkjfdsfjlj sddfjdsfjdslfjskfs lsdfjslfjlsdf  </p>
+                <p class="card-text">Last updated 3 mins ago</p>
+              </div>
+            </div>
+
+          </div>            
+
+          <!-- 2o card -->
+          <div class="col-md-3 col-sm-12">
+
+            <div class="card border-success mb-3">
+              <div class="card-header bg-transparent border-success">Título</div>
+              <div class="card-body text-success">
+                <h5 class="card-title">Subtítulo</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              <div class="card-footer bg-transparent border-success">Rodapé</div>
+            </div>
+
+          </div>  
+
+          <!-- 3o card -->
+          <div class="col-md-3 col-sm-12">
+
+            <div class="card mb-3">
+              <img class="card-img-top" src="assets/img/pessoa-1.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Título</h5>
+                <p class="card-text">dasdsadsadasdasdefewwrfgfgdfg fsdffs qwewe fgfgfd dffdfgdfgf </p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+
+          </div>            
+
+          <!-- 4o card -->
+          <div class="col-md-3 col-sm-12">
+
+            <div class="card mb-3"> 
+              <h5 class="card-title my-2">Depoimento</h5>
+              <img class="card-img-top" src="assets/img/pessoa-1.jpg">
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+
+          </div>                              
+        
+        </div> <!-- end da div da 2a row -->  
+
+        <!-- fim cards -->
+
+      </div>
+
+      </div>
+          
+      <!-- accordion -->  
+      <div class="container">  
+      
+        <div id="accordion">
+
+          <!-- 1o item -->
+          <div class="card">
+
+            <div class="card-header" id="cabecalhoItem1"> <!-- cabecalho -->
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#conteudoItem1">
+                  Botões
+                </button>
+              </h5>
+            </div>
+
+            <div id="conteudoItem1" class="collapse show" data-parent="#accordion">
+              <div class="card-body">
+
+                <!--botoes-->
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-secondary">Secondary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-light">Light</button>
+                <button type="button" class="btn btn-dark">Dark</button>
+
+                <button type="button" class="btn btn-link">Link</button>
+
+                <!-- contorno dos botões -->
+                <button type="button" class="btn btn-outline-primary">Primary</button>
+                <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                
+                <!-- tamanho dos botões -->
+                <button type="button" class="btn btn-primary btn-lg">Large</button>
+                <button type="button" class="btn btn-secondary btn-sm">Small</button> 
+
+                <br><br>
+
+                <!-- elemento bloqueantes -->
+                <button type="button" class="btn btn-primary btn-block">Block 1</button>
+                <button type="button" class="btn btn-danger btn-block">Block 2</button>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="cabecalhoItem2">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#contudoItem2">
+                  Produto 2
+                </button>
+              </h5>
+            </div>
+
+            <div id="contudoItem2" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                O Produto 2 fdgjfgfdjkghfdjghfdjghjdf jdfghjqwuwuwqe bsdbfsfdsfjdsjfg qweuiywuieyqwuieyque  hsgfdshfsdhfgdfgshgfshjgf
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="cabecalhoItem3">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#conteudoItem3">
+                  Produto 3
+                </button>
+              </h5>
+            </div>
+
+            <div id="conteudoItem3" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                O Produto 3 hsfhdjfh jkh pioirwirpiroewr  jkjsfjkhdsfhdsjfh iouiuwqieuqwieuqowieuoqiweuoqweu
+              </div>
+
+            </div>
+          </div>
+
+        </div>   
+
+      </div>  
+      <!-- fim accordion -->  
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script> 
+  </body>
+</html>

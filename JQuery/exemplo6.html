@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>        
+		jQuery(document).ready(function() {	
+
+		    //comentar para executar uma linha por vez ...	
+
+			//seleciona as tag´s b e depois a tag pai (td) e seta o bk
+			//$('b').parent().css('background', 'aquamarine');
+
+			//seleciona as tag´s b e depois as tags pai (vai subindo na arvore, td,tr,table e para em table...senão iria até html)
+			//$('b').parents('table').css('background', 'aquamarine');
+
+			//igual a parents, mas o seletor de parada (no caso table) não será incluso
+			//$('b').parentsUntil('table').css('background', 'aquamarine');
+
+			//seleciona as td´s e depois sua tag filha. As únicas td´s que tem filhas, são as duas com a tag b
+			//$('td').children().css('background', 'aquamarine');
+
+            //igual children - a diferença é que também retorna textos e comentários
+			//$('td').contents().css('background', 'aquamarine');
+
+            //seleciona a linha com a classe row2 e depois todas as td´s dessa linha
+			//$('.row2').find('td').css('background', 'aquamarine');
+
+		}); 
+    </script>
+
+    <style type="text/css">    	
+		table, td{
+		    border: 1px solid black;
+		    text-align: center;
+		}
+
+		table{
+		    width: 100%;
+		}
+
+		td{
+		    padding: 10px;
+		}
+    </style>
+
+</head>
+
+<body>
+
+	<table>
+	    <tr class="row1">
+	        <td>1</td>
+	        <td>
+	            <b>2</b>
+	        </td>
+	        <td>3</td>
+	    </tr>
+	    <tr class="row2">
+	        <td>
+	            <b>4</b>
+	        </td>
+	        <td>5</td>
+	        <td>6</td>
+	    </tr>
+	    <tr class="row3">
+	        <td>7</td>
+	        <td>8</td>
+	        <td>9</td>
+	    </tr>
+	</table>
+   
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+ <!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Objetos - Recuperando o valor de uma propriedade</title>    
+</head>
+
+<body>
+    Introdução ao Javascript  - Objetos - Recuperando o valor de uma propriedade
+    <br><br>
+
+    <div id="curso"></div>
+
+    <script>         
+       var curso = { 
+            sigla: "TI", 
+            nome: "Técnico em Informática" 
+        };
+
+        console.log(curso.sigla); 
+        console.log(curso["sigla"]); 
+
+        document.getElementById("curso").innerHTML = curso.sigla + " - " + curso.nome;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!-- escrever a data por extenso no topo da tela -->
+<!-- verificar se hj é seu aniversário -->
+
+<!doctype html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Datas</title>
+
+<script> 
+  
+
+	var hoje = new Date();  //data atual
+
+    function verificarAniversario() {
+
+      //var aniversario = new Date("09/04/2017");	
+      var aniversarioForm = document.getElementById("aniversario").value;
+      var aniversario = new Date(aniversarioForm);
+
+
+      if ( (hoje.getDate() == aniversario.getMonth()+1) && (hoje.getMonth()+1 == aniversario.getDate()) )  {
+      	alert("Feliz aniversario!");
+      } else {
+      	alert("Calma tá chegando !");
+      } 
+
+    }
+
+	function escreveData() {   	  
+	  var dia = hoje.getDate();
+	  var mes = hoje.getMonth();	      
+	  var ano = hoje.getFullYear();
+
+	  var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+	  var mesTexto = meses[mes];	      
+
+	  var diaSemana = hoje.getDay();
+	  var diasSemana = ["Dommingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sabado"];
+	  var diaSemana = diasSemana[diaSemana];
+
+	  var dataPorExtenso = diaSemana + ", " + dia +" de " + mesTexto + " de " + ano;
+
+	  document.getElementById("data").innerHTML = dataPorExtenso;
+	}
+
+</script>
+
+</head>
+
+<body onload="escreveData();">
+
+ <div id="data"></div> 
+
+ <br><br>
+
+ Seu aniversário:<br>
+ <input type="text" id="aniversario">
+ <input type="button" value="Verificar" 
+                          onclick="verificarAniversario();">
+</body>
+</html>

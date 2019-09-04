@@ -1,0 +1,70 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin : 0;
+  padding: 0;
+}
+
+.clear {
+  clear: both;     
+}
+
+.navbar {
+  background-color: #424242;    
+}
+
+
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;    
+}
+
+.nav li {
+  float: left;
+}
+
+.nav li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.nav .active {
+  background-color: #000000;
+}
+
+.nav li a:hover {
+ background-color: #1c1c1c;
+}
+
+#btn-nav {
+  display: none;
+  border-radius: 3px;
+  border: 1px solid #000000;
+  color: #ffffff;
+  padding: 5px;
+  float: right;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.container {
+  padding: 10px;
+}
+
+
+/*** Breakpoint **/
+
+@media only screen and (max-width: 800px) {
+    
+    #btn-nav {
+        display: block;
+    }
+    
+    .nav {
+        display: none;
+    }
+    
+}

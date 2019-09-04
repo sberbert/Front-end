@@ -1,0 +1,22 @@
+<!doctype html>
+
+<html ng-app>
+    
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  </head>
+    
+  <body ng-init="bairroDoLimoeiro=['Mônica', 'Magali', 'Cascão', 'Cebolinha']">      
+      
+    <table border="1">
+      <tr>
+        <th>Bairro do Limoeiro</th>
+      </tr>    
+      <tr ng-repeat="pessoa in bairroDoLimoeiro">
+        <td>{{pessoa}}</td>
+      </tr>
+    </table>      
+      
+  </body>
+    
+</html>

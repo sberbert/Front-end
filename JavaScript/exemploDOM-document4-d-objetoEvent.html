@@ -1,0 +1,41 @@
+<html>
+
+  <head>
+    <title>Eventos</title> 
+  </head>
+
+  <body>
+  	
+		<input type="text" id="myInput" name="myInput">
+		<button>Click Me</button>
+
+	<script>
+		//para ver todas as características do evento de click dentro do campo
+		document.querySelector('input').addEventListener('click', 
+													  function(event) { 
+													  	console.log(event);													
+													  } )
+
+
+		//para ver todas as características do evento de soltar a tecla dentro do campo
+		/*document.querySelector('input').addEventListener('keyup', 
+													  function(event) { 
+													  	console.log(event);												
+													  } )	*/
+
+		//verificando se a tecla pressionada foi <<enter>> - obs sem <form></form>, pq nesse caso o enter faria o submit, então teríamos que tratar
+		document.querySelector('input').addEventListener('keyup', 
+													  function(event) { 
+													  	if(event.keyCode == 13)	 {
+													  		console.log(this.value);
+													  		if (this.value != '') {
+													  			this.style.backgroundColor = 'green';
+													  		} else {
+													  			this.style.backgroundColor = 'red';
+													  		}
+													  	}											
+													  } )			
+	</script>
+
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Layout Flexivel - Formula</title>
+    
+    <style type="text/css">
+        
+        /* teste 1 -  css com medidas absolutas */
+        /*
+        .container {
+          margin: 0 auto;
+          width: 960px;
+        }
+
+        .news {
+          width: 480px;
+        }
+
+        .news .title {
+          font-size: 20px;
+        }
+
+        .news .intro {
+          font-size: 14px;
+        }
+        */
+        
+        /* teste 2 - css comm medidas relativas usando a fórmua Resultado = Alvo / Contexto */        
+        .container { 
+        /*não vamos mexer no container por enquanto - normal escolher o tamanho de um container pra acomodar o restante do site - lidaremos melhor com isso com media queries */
+          margin: 0 auto; /*centralizando o site */
+          width: 960px;
+        }
+
+        .news {
+          /* formula -> resultado = alvo(news) / contexto ou elemento pai(container) -> 480 do css anterior/960 = 0,5 */
+          width: 50%; /* 480 / 960 */
+        
+        }
+
+        .news .title {
+          /* formula -> resultado = alvo(title) / contexto ou elemento pai -> 20 do css anterior/16 padrão do nav = 01.25 */          
+          font-size: 1.25em; /* 20 / 16 */
+        }
+
+        .news .intro {
+          /* formula -> resultado = alvo(intro) / contexto ou elemento pai -> 14 do css anterior/16 padrão do nav = 01.25 */                
+          font-size: 0.875em; /* 14 / 16 */
+        }        
+        
+    </style>     
+</head>
+    
+<body>
+
+<div class="container">
+    <article class="news">
+        <h1 class="title">Novidades do site</h1>
+        <p class="intro">O site agora tem novidades! Confira como conseguimos o resultado de ...</p>
+        <a href="/blog/novidades-do-site" class="more">Leia mais</a>
+    </article>
+</div>
+
+</body>
+</html>

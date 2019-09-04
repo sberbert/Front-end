@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulários</title>
+    <link rel="icon" href="imagens/favicon-16px.ico" sizes="16x16">    
+    <link rel="icon" href="imagens/favicon-32px.ico" sizes="32x32">   
+</head>
+  
+  <body>
+
+  <h1>Formulário - Cadastro de Funcionário</h1>
+  
+  <form>
+    <label for="nome">Nome:</label><br>
+    <input type="text" id="nome" placeholder="nome" required size="50" autofocus spellcheck="false">
+      
+    <br><br>
+      
+    Idade:<br>  
+    <input type="text" placeholder="idade" minlength="2" maxlength="2" >    
+    
+    <br><br>
+    
+    Cargo:<br>
+    <input type="text" value="Professora" disabled>
+      
+    <br><br>
+      
+    Cargo:<br>
+    <input type="text" value="Professora" readonly>
+            
+    <br><br>
+      
+    Senha:<br>
+    <input type="password" placeholder="senha" required>
+      
+    <br><br>
+    
+    Sexo:<br>   
+    <label for="Masculino">M</label>
+    <input type="radio" name="sexo" id="Masculino" value="M" checked="checked">
+    <label for="Feminino">F</label>
+    <input type="radio" name="sexo" id="Feminino" value="F">
+      
+    <br><br>
+      
+    Períodos de aula:<br>
+    <input type="checkbox" name="manhã"> Manhã
+    <input type="checkbox" name="tarde"> Tarde
+    <input type="checkbox" name="noite"> Noite
+      
+    <br><br>
+    Cor preferida:<br>
+    <input type="color">
+      
+    <br><br>
+      
+    <fieldset >
+        <legend>Datas</legend>
+        
+        Data Nascimento:<br>
+        <input type="date">
+
+        <br><br>
+
+        Data e hora do cadastro - local:<br>
+        <input type="datetime-local">
+
+        <br><br>
+
+        Data e hora do cadastro:<br>
+        <input type="datetime">
+
+        <br><br>      
+        Horário do cadastro:<br>  
+        <input type="time">
+
+        <br><br>
+        Mês do cadastro:<br>
+        <input type="month">
+
+        <br><br>
+        Semana do cadastro:<br>
+        <input type="week">  
+    </fieldset>  
+        
+    <br><br>   
+    E-mail:<br>  
+    <input type="email" placeholder="e-mail">
+      
+    <br><br>   
+    Nº de Filhos:<br>  
+    <input type="number" placeholder="nº de filhos" min="1" max="5" step="2">      
+    
+    <br><br>   
+    Capacitação:<br>  
+    <input type="range" min="0" max="5">
+      
+    <br><br>   
+    Buscar:<br>
+    <input type="search" placeholder="termo da pesquisa">
+
+    <br><br>   
+    Site:<br>
+    <input type="url">
+
+    <br><br>    
+    Observações:<br>
+    <textarea rows="5" cols="40" spellcheck="false"></textarea>
+      
+    <br><br>
+    Curso:<br>      
+    <select name="curso">
+      <option></option>
+      <option value="Informática">Informática</option>
+      <option value="Edificações" >Edificações</option>
+      <option value="Geomática">Geomática</option>
+      <option value="Mecânica">Mecânica</option>
+      <option value="Enfermagem">Enfermagem</option>
+    </select>
+      
+    <br><br>
+    Áreas preferidas (até 2):<br>      
+    <select name="areas" size="3" multiple>
+      <option value="Exatas">Exatas</option>
+      <option value="Humanas" selected>Humanas</option>
+      <option value="Biológicas">Biológicas</option>
+   </select>   
+      
+    <br><br>
+      
+    <input type="file" name="foto">
+
+    <br><br>
+    
+    Veículo que utilizará no campus:<br>
+      
+    <select id="veiculo">
+        <optgroup label="Carros">                
+          <option value="GM">GM</option>
+          <option value="VW" selected>VW</option>
+          <option value="Renault">Renault</option>
+        </optgroup>   
+        
+        <optgroup label="Motos">                
+          <option value="Honda">Honda</option>
+          <option value="Yamaha">Yamaha</option>
+          <option value="Suzuki">Suzuki</option>
+        </optgroup>      
+    </select>
+    
+    <br><br>
+      
+    Conhecimento:<br>
+      
+    <input type="text" id="conhecimento" name="conhecimento" list="listaconhecimento">      
+    <datalist id="listaconhecimento">
+      <option value="HTML5">HTML5</option>
+      <option value="HTML4">HTML4</option>
+      <option value="CSS3">CSS3</option>
+      <option value="PHP">PHP</option>   
+    </datalist>
+      
+    <input type="hidden" name="id">
+        
+    <br><br>
+        
+    <br><br>
+    <input type="button" onclick="alert('Você clicou no botão !')" value="Botão">
+    <input type="submit" value="Cadastrar" formaction="http://143.106.241.1/matioli/2016/daw/pratica1/cadastro.php" formmethod="post" formtarget="_blank">    
+    <input type="submit" value="Enviar por e-mail" formaction="xxx" formmethod="get" formnovalidate>  
+    <button type="reset">Limpar</button>      
+    
+  </form>
+
+  </body>
+</html>

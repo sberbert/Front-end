@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+   <meta charset="utf-8">
+    <title>Formulários</title>
+    <link rel="icon" href="imagens/favicon-16px.ico" sizes="16x16">    
+    <link rel="icon" href="imagens/favicon-32px.ico" sizes="32x32">   
+</head>
+  
+  <body>
+
+  <h1>Formulário - Cadastro de Funcionário</h1>
+  
+  <form action="http://143.106.241.1/matioli/2016/daw/pratica1/cadastro.php" method="get">
+    <label for="nome">Nome:</label><br>
+    <input type="text" id="nome" name="nome" placeholder="nome" required size="50">
+      
+    <br><br>
+      
+    <label for="idade">Idade:</label><br>  
+    <input type="text" id="idade" name="idade" placeholder="idade" minlength="2" maxlength="2" >    
+    
+    <br><br>
+    
+    <label for="cargo1">Cargo:</label><br> 
+    <input type="text" id="cargo1" name="cargo" value="Professora" disabled>
+      
+    <br><br>
+      
+    <label for="cargo2">Cargo:</label><br>
+    <input type="text" id="cargo2" name="cargo" value="Professora" readonly>
+            
+    <br><br>
+
+    <label for="senha">Senha:</label><br>
+    <input type="password" id="senha" name="senha" placeholder="senha" required>
+      
+    <br><br>
+    
+    Sexo:<br>
+    <label for="Masculino">M</label> 
+    <input type="radio" name="sexo" id="Masculino" value="M" checked="checked">   
+    <label for="Feminino">F</label> 
+    <input type="radio" name="sexo" id="Feminino" value="F">
+      
+    <br><br>
+      
+    Períodos de aula:<br>
+    <label for="manhã">Manhã</label> 
+    <input type="checkbox" id="manhã" name="manhã"> 
+    
+    <label for="tarde">Tarde</label> 
+    <input type="checkbox" id="tarde" name="tarde"> 
+    
+    <label for="noite">Noite</label> 
+    <input type="checkbox" id="noite" name="noite">
+      
+    <br><br>
+    <label for="cor">Cor preferida</label>     
+    <input type="color" id="cor" name="cor">
+      
+    <br><br>
+    <label for="dataNascimento">Data Nascimento</label><br>    
+    <input type="date" id="dataNascimento" name="dataNascimento">
+    
+    <br><br>
+
+    <label for="dataHoraCadastro">Data e Hora do Cadastro</label><br>  
+    <input type="datetime-local" id="dataHoraCadastro" name="dataHoraCadastro">
+      
+    <br><br>      
+      <label for="horaCadastro">Horário do cadastro:</label><br>    
+    <input type="time" id="horaCadastro" name="horaCadastro">
+      
+    <br><br>
+    
+    <label for="mesCadastro">Mês do cadastro:</label><br>
+    <input type="month" id="mesCadastro" name="mesCadastro">
+      
+    <br><br>
+    <label for="week">Semana do cadastro:</label><br>    
+    <input type="week" id="week" name="semanaCadastro">  
+      
+    <br><br>       
+    <label for="email">E-mail:</label><br>
+    <input type="email" id="email" placeholder="e-mail" name="email">
+      
+    <br><br>        
+    <label for="numFilhos">Nº de Filhos:</label><br>
+    <input type="number" id="numFilhos" name="numFilhos" placeholder="nº de filhos" min="1" max="5" step="2">      
+    
+    <br><br>       
+    <label for="capacitacao">Capacitação:</label><br>
+    <input type="range" id="capacitacao" name="capacitacao" min="0" max="5">
+      
+    <br><br>       
+    <label for="busca">Buscar:</label><br>
+    <input type="search" id="busca" name="busca" placeholder="termo da pesquisa">
+
+    <br><br>       
+    <label for="site">Site:</label><br>
+    <input type="url" id="site" name="site">
+
+    <br><br>        
+    <label for="obs">Observações:</label><br>
+    <textarea name="obs" id="obs" rows="5" cols="40"></textarea>
+      
+    <br><br>     
+    <label for="curso">Curso:</label><br>
+    <select name="curso" id="curso">
+      <option value="Informática">Informática</option>
+      <option value="Edificações" selected>Edificações</option>
+      <option value="Geomática">Geomática</option>
+      <option value="Mecânica">Mecânica</option>
+      <option value="Enfermagem">Enfermagem</option>
+    </select>
+      
+    <br><br>        
+    <label for="areas">Áreas preferidas:</label><br>
+    <select name="areas" id="areas" size="3" multiple>
+      <option value="Exatas">Exatas</option>
+      <option value="Humanas" selected>Humanas</option>
+      <option value="Biológicas">Biológicas</option>
+   </select>      
+
+        
+    <br><br>
+    <input type="button" onclick="alert('Você clicou no botão !')" value="Botão">
+    
+    <input type="submit" value="Cadastrar">      
+    
+  </form>
+
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>JQuery</title>
+	</head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>      
+		jQuery(document).ready(function() {
+
+			//executar um por vez 
+
+			//substitui o primeiro elemento selecionado
+			//$('li').first().replaceWith('<li>1o item</li>');
+
+            //substitui todos os itens selecionados
+			//$('li').replaceWith('<li>teste</li>');			
+
+            //igual ao replaceWith(), diferente apenas na sintaxe, que primeiro cria o novo elemento com $ e depois substitui por cada elemento com o seletor passado como parâmentro em replaceAll()
+            //$('<li>teste x</li>').replaceAll('li');
+
+            //clonando itens - ex1
+            //var copiaItem = $('li').clone();
+            //$('ul').append(copiaItem);
+
+            //clonando itens - ex2
+            //var copiaItem = $('li').first().clone();
+            //$('ul').append(copiaItem);
+
+		}); 			
+    </script>	
+
+	<body>
+		<ul>
+		    <li>1</li>
+		    <li>2</li>
+		    <li>3</li>
+		</ul>	
+	</body>
+</html>

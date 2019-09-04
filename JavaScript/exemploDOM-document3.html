@@ -1,0 +1,38 @@
+
+<div id="titulo"></div>
+
+<!-- com strings -->
+<!--script type="text/javascript">
+  var html = '<h1>Cotil</h1>';
+  var titulo = document.getElementById('titulo');
+  titulo.innerHTML = html;
+</script-->
+
+<!-- com utilizando métodos do DOM -->
+<script type="text/javascript">
+  var tituloH1 = document.createElement("H1");
+  var titulo = document.createTextNode('TreinaWeb');
+  var tituloDiv = document.getElementById('titulo');
+
+  tituloH1.appendChild(titulo);
+  tituloDiv.appendChild(tituloH1);
+</script>
+
+<!-- com utilizando métodos do DOM e manipulando CSS -->
+<script type="text/javascript">
+  var tituloH1 = document.createElement("H1");
+  var titulo = document.createTextNode('TreinaWeb');
+  var tituloDiv = document.getElementById('titulo');
+
+  tituloH1.appendChild(titulo);
+  tituloH1.style.color = "blue";
+  tituloDiv.appendChild(tituloH1);
+</script> 
+
+<html>
+  <body>
+   <div id="titulo">
+   
+   </div>
+  </body>
+</html>

@@ -1,0 +1,2 @@
+[1004/202828:ERROR:file_io.cc(41)] write: O pipe está sendo fechado. (0xE8)
+[1005/112703:ERROR:file_io.cc(41)] write: O pipe está sendo fechado. (0xE8)

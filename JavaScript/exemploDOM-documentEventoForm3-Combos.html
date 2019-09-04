@@ -1,0 +1,103 @@
+<html>
+    
+<head>
+  <title>Document</title>
+  <style>
+    div {      
+      width: 180px;    
+      position: relative;
+      float: left;
+      vertical-align: center;
+    }
+  </style>
+  
+<script type="text/javascript">      
+
+    function comprar() {
+        
+      var comboProdutosDisponiveis = document.getElementById("produtosDisponiveis");         
+      var produtoSelecionado = "";         
+
+      //verificando se algo foi selecionado no combo de produtos disponíveis
+      if (comboProdutosDisponiveis.options[comboProdutosDisponiveis.selectedIndex] == undefined) {
+        alert("Selecione um produto !"); 
+          
+      } else {
+        //obtendo o valor selecionado no combo de produtos disponíveis
+        produtoSelecionado = comboProdutosDisponiveis.options[comboProdutosDisponiveis.selectedIndex].value;
+          
+        //criando um novo elemento option para o combo de produtos comprados  
+        var option = document.createElement("option");
+        option.value = produtoSelecionado;
+        option.text = produtoSelecionado;
+          
+        var comboProdutosComprados = document.getElementById("produtosComprados");           
+        comboProdutosComprados.add(option);  
+          
+        //remover o produto selecionado do combo de produtos disponíveis
+        comboProdutosDisponiveis.remove(comboProdutosDisponiveis.selectedIndex);
+      }
+        
+    }
+    
+    function naoComprar() {
+        
+      var comboProdutosComprados = document.getElementById("produtosComprados"); 
+      var produtoSelecionado = "";         
+
+      //verificando se algo foi selecionado no combo de produtos comprados
+      if (comboProdutosComprados.options[comboProdutosComprados.selectedIndex] == undefined) {
+        alert("Selecione um produto !"); 
+          
+      } else {
+        //obtendo o valor selecionado no combo  
+        produtoSelecionado = comboProdutosComprados.options[comboProdutosComprados.selectedIndex].value;
+          
+        //criando um novo elemento option para o combo de produtos comprados  
+        var option = document.createElement("option");
+        option.value = produtoSelecionado;
+        option.text = produtoSelecionado;  
+          
+        var comboProdutosDisponiveis = document.getElementById("produtosDisponiveis");          
+        comboProdutosDisponiveis.add(option);  
+          
+        //remover o produto selecionado do combo de produtos comprados
+        comboProdutosComprados.remove(comboProdutosComprados.selectedIndex);
+      }
+        
+    } 
+    
+  </script>  
+</head>
+    
+<body>    
+
+<form>
+  
+    <div>
+    Produtos disponiveis:<br>
+    <select id="produtosDisponiveis" multiple size="5">
+        <option>Produto 1</option>
+        <option>Produto 2</option>
+        <option>Produto 3</option>
+        <option>Produto 4</option>
+        <option>Produto 5</option>
+    </select>        
+    
+    </div>
+    
+    <div>        
+        <input type="button" value="<<" onClick=naoComprar();>      
+        <input type="button" value=">>" onClick=comprar();>        
+    </div>
+    
+    <div>
+      Produtos comprados:<br>
+      <select id="produtosComprados"multiple size="5"></select>      
+    </div>    
+    
+</form>   
+    
+</body>
+    
+</html>

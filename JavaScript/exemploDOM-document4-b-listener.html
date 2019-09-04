@@ -1,0 +1,32 @@
+<html>
+
+  <head>
+    <title>Eventos</title> 
+  </head>
+
+  <body>
+
+	<input type="button" id="botao1" value="Ok1">
+	<input type="button" id="botao2" value="Ok2">
+
+	<script type="text/javascript">
+
+	  /* adicionando o listener com uma função anônima */
+	  var okBtn = document.getElementById('botao1');
+
+	  okBtn.addEventListener('click', function() {
+	    alert('Alerta!');
+	  })
+
+	  /* removendo o listener - a função tem que ser atribuída a uma var */
+	  var myFunc = function() { 
+	  	alert('Alerta!'); 
+	  }
+
+	  document.querySelector("#botao2").addEventListener('click', myFunc);
+	  document.querySelector("#botao2").removeEventListener('click', myFunc);
+
+	</script>
+
+  </body>
+</html>

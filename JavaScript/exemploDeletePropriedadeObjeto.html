@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Objetos - Removendo propriedade</title>
+    
+    <script> 
+        var curso = { 
+            sigla: "TI", 
+            nome: "Técnico em Informática" 
+        }; 
+        
+       
+        // imprime true
+        console.log("sigla" in curso); 
+        
+        // imprime TI
+        console.log(curso.sigla); 
+        
+        delete curso.sigla; 
+        
+        // imprime false 
+        console.log("sigla" in curso); 
+        
+        // imprime undefined 
+        console.log(curso.sigla); 
+        
+    </script>
+    
+</head>
+<body>
+  Introdução ao Javascript  - Objetos - Removendo propriedade
+</body>
+</html>

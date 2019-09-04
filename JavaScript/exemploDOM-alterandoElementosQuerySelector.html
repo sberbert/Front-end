@@ -1,0 +1,36 @@
+<!-- 
+
+- alterando elementos: 
+  - document.querySelector("li").textContent = "novo texto"; -- apenas texto
+  - document.querySelector("li").innerHTML = "<b>novo texto</b>"; -- html
+  - document.querySelector("li").outerHTML - retorna além do texto dentro do li, a estrutura do li.
+    <li><b>novo texto</b></li>
+-->
+
+<html>
+    
+<head>
+  <title>querySelector</title>
+    
+   <script type="text/javascript">
+       
+    function alterarTexto() {      
+      document.querySelector("p").textContent = "COTIL - UNICAMP"; 
+      //document.querySelector("P").innerHTML = "<b>COTIL - UNICAMP</b>";
+    }
+        
+  </script>   
+    
+</head>
+        
+<body>
+
+  Alterando elementos com querySelector
+    
+  <p>COTIL</p>
+    
+  <button type="button" onclick="alterarTexto();">Alterar Texto</button>
+    
+
+</body>
+</html>

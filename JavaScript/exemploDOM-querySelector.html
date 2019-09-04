@@ -1,0 +1,65 @@
+<!-- 
+
+ - acessando elementos: 
+
+   - document.querySelector("seletor"); -- retorna o elemento com o seletor informado
+	 Ex: document.querySelector("button"); 
+	 Se houver mais de um elememento com o mesmo seletor, será sempre lido o 1o.
+
+   - document.querySelectorAll("seletor"); -- retorna todos os elementos com o seletor informado
+     Ex: document.querySelectorAll("li"); 
+
+  - para ambos, se o seletor não for uma tag e sim um ID, colocar a # antes e se for class, colocar um . antes.
+      Ex: document.querySelector("#button"); 
+      Ex: document.querySelector(".button"); 
+
+-->
+
+<html>
+    
+<head>
+  <title>querySelector</title>
+</head>
+        
+<body>
+
+  Testando querySelector
+  <br><br>
+    
+  <button type="button" id="x" value="Botão 1" onclick="teste();">Botão 1</button>
+  <button type="button" id="x" value="Botão 2" onclick="teste();">Botão 2</button>
+    
+  <br><br>
+    
+  Testando querySelectorAll
+  <br>
+    
+    <ul>
+        <li id="y">Informática</li>
+        <li id="y">Edificações</li>
+        <li id="y">Enfermagem</li>
+        <li id="y">Geodésia</li>
+        <li id="y">Qualidade</li>
+    </ul>
+    
+    
+   <script type="text/javascript">
+       
+     //querySelector       
+     var texto = document.querySelector("button").value;        
+    //var texto = document.querySelector("#x").value; 
+     alert(texto);
+       
+       
+     //querySelectorAll
+     var elementosLista = document.querySelectorAll("li");
+     //var elementosLista = document.querySelectorAll("#y");
+    
+     for (var i=0; i<=elementosLista.length; i++) {
+         alert(elementosLista[i].textContent);
+     }
+        
+  </script>    
+
+</body>
+</html>

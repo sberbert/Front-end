@@ -1,0 +1,27 @@
+<!doctype html>
+
+<html ng-app>
+    
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  </head>
+    
+  <body>
+    <table ng-controller='SimpleController' border="1">
+      <tr>
+        <th>Bairro do Limoeiro</th>
+      </tr>            
+      <tr ng-repeat="pessoa in bairroDoLimoeiro">
+        <td>{{pessoa}}</td>
+      </tr>
+    </table>
+     
+ 
+    <script>
+      function SimpleController($scope){
+        $scope.bairroDoLimoeiro = ['Mônica', 'Magali', 'Cascão', 'Cebolinha'];
+      }
+    </script>
+ 
+  </body>
+</html>

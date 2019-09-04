@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+ <title>History</title><p>
+    
+<script language="javascript">    
+    //back()
+    function voltar() {
+      window.history.back();
+      //window.history.go(-1);
+      
+    }
+    
+    //forward
+    function prosseguir() {
+      window.history.forward();
+      //window.history.go(2);   
+    }
+
+    //location
+    function entrarSite() {
+      location.href="http://www.cotil.unicamp.br";
+    }
+    
+    //length
+    var numeroDePaginasDoHistorico = window.history.length;
+    console.log(numeroDePaginasDoHistorico);
+    
+</script>
+    
+</head>
+    
+<body>
+  <input type="button" value="<< Voltar"  onclick="voltar()">
+  <input type="button" value="Proximo >>" onclick="prosseguir()">
+  <input type="button" value="Site Cotil" onclick="entrarSite()">
+</body>
+</html>

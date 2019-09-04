@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+ <title>Window</title><p>
+    
+<script language="javascript">
+    
+    function abrirJanela1() {
+      window.open("http://www.google.com");    
+    }
+    
+    function abrirJanela2() {
+      window.open("http://www.google.com", "Janela 2", "width=350, height=400, top=150, left=250");    
+    }    
+    
+    function abrirJanela3() {
+      window.open("http://www.google.com", "Janela 3", "directories=0,titlebar=0,toolbar=0,location=0,status=0,menubar=0,scrollbars=no,resizable=0,width=400,height=350");    
+    }        
+    
+</script>
+    
+</head>
+    
+<body onload="abrirJanela3()">
+
+<form>
+  <input type="button" value="Abrir janela 1" onclick="abrirJanela1()">    
+  <input type="button" value="Abrir janela 2" onclick="abrirJanela2()">    
+  <input type="button" value="Abrir janela 3" onclick="abrirJanela3()">      
+</form>
+ 
+</body>
+</html>
+
+

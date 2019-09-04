@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+ <title>Window</title><p>
+    
+<script language="javascript">
+    
+    var nome = window.prompt("Digite o seu nome:");
+    console.log('Nome = ' + nome);
+    
+    //tamanhos
+    console.log('innerWidth: '+window.innerWidth);
+    console.log('innerHeight: '+window.innerHeight);
+    
+    //location
+    console.log('locattion:' + window.location);
+    
+    //entra no site da unicamp após 5 segundos
+    setTimeout("document.location = 'http://www.unicamp.br'",3000);
+    
+    //navigator
+    console.log(window.navigator);
+    console.log(window.navigator.vendor);
+    
+    //screen
+    console.log(window.screen);
+    console.log(window.screen.orientation.angle);   
+    
+</script>
+    
+</head>
+    
+<body>
+ 
+</body>
+</html>

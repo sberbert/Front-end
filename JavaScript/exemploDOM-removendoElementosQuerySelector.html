@@ -1,0 +1,39 @@
+<!-- 
+  - document.querySelector('x'); - para selecionar o elemento
+  - document.querySelector('x').remove(); - remove o elemento
+-->
+
+<html>
+    
+<head>
+  <title>querySelector</title>
+    
+   <script type="text/javascript">
+       
+    function remove(idBtn, idTxt) {           
+      document.querySelector('#'+idBtn).remove(); 
+      document.querySelector('#'+idTxt).remove(); 
+    }
+        
+  </script>   
+    
+</head>
+        
+<body>
+
+  Removendo elementos com querySelector
+  <br><br>
+    
+  <button type="button" id="btnCurso1" onclick="remove('btnCurso1', 'txtCurso1');">-</button> 
+  <span id="txtCurso1">1INFN</span>
+  <br>
+
+  <button type="button" id="btnCurso2" onclick="remove('btnCurso2', 'txtCurso2');">-</button> 
+  <span id="txtCurso2">2INFN</span>
+  <br>
+
+  <button type="button" id="btnCurso3" onclick="remove('btnCurso3', 'txtCurso3');">-</button> 
+  <span id="txtCurso3">3INFN</span>    
+
+</body>
+</html>

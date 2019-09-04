@@ -1,0 +1,46 @@
+<html>
+    
+<head>
+  	<title>Circulo</title>
+
+	<script type="text/javascript">   
+
+	    function calcArea() {
+          var pi =  3.14;
+          var raio =  parseInt(document.getElementById('raio').value);
+	      document.getElementById('area').value = pi * (raio*raio);    
+	    }
+
+	    function calcPerimetro() {
+          var pi =  3.14;
+          var raio =  parseInt(document.getElementById('raio').value);
+	        document.getElementById('perimetro').style.color = "blue";
+          document.getElementById('perimetro').innerHTML = 2*(pi * raio);     
+	    }
+
+	  </script>
+
+</head>
+    
+<body>
+    
+<form>
+  Raio:<br>
+  <input type="text" id="raio"><br><br>
+
+  <input type="button" value="Área" onclick="calcArea();">  
+  <input type="button" value="Perímetro" onclick="calcPerimetro();">  
+
+  <br><br>
+  Área:<br>
+  <input type="text" id="area" readonly>  
+
+  <br><br>
+
+  Perímetro:<br>
+  <span id="perimetro"></span>    
+</form>  
+    
+</body>
+    
+</html>

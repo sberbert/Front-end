@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Layout Flexivel - Formula</title>
+    
+    <style type="text/css">
+        
+        .no-margin-right { 
+            margin-right: 0;
+        }
+        
+        .main {
+          margin: 0 auto;
+          width: 72%; 
+        }  
+        
+        .container {
+          float: left;
+          margin-right: 3.125%; 
+          width: 29.16666666666667%; 
+        }
+
+        .news .title {
+          font-size: 1.5625em; 
+          margin: 0;
+        }
+
+        .news .intro {
+          font-size: 1em; 
+        }
+        
+        .news .more {
+            float: right;
+        }
+        
+        /* para a imagem do gatinho ficar com 100% do tamanho do seu elemento pai - testar a 1a vez sem esse trecho */
+        img {
+          max-width: 100%;
+        }
+                
+        @media only screen and (max-width: 640px) {
+          .container {
+            float: none;
+            width: 100%;
+          }
+
+          .news .more {
+            float: none;
+          }
+        }        
+        
+    </style>     
+</head>
+    
+<body>
+
+    <div class="main">
+        <article class="container">
+            <section class="news">
+                <h1 class="title">Lorem ipsum dolor sit amet, consectetur</h1>
+                <img src="http://placekitten.com/g/200/300" width="200">                
+                <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo ex!</p>
+                <a href="#" class="more">Lorem ipsum</a>
+            </section>
+        </article>
+
+        <article class="container">
+            <section class="news">
+               <h1 class="title">Lorem ipsum dolor sit amet, consectetur</h1>
+                <img src="http://placekitten.com/g/200/300" width="200">
+                <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo ex!</p>
+                <a href="#" class="more">Lorem ipsum</a>
+            </section>
+        </article>
+
+        <article class="container no-margin-right">
+            <section class="news">
+                <h1 class="title">Lorem ipsum dolor sit amet, consectetur</h1>
+                <img src="http://placekitten.com/g/200/300" width="200">
+                <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo ex!</p>
+                <a href="#" class="more">Lorem ipsum</a>
+            </section>
+        </article>
+    </div>
+
+</body>
+</html>

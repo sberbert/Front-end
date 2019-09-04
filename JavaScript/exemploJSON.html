@@ -1,0 +1,17 @@
+<script type="text/javascript">
+
+var alunoObj = {
+	ra: 12345,
+	nome: 'Simone',
+    write: function() { //json não recebe funções	
+    	console.log('Hello');
+    }
+}
+
+var alunoStr = JSON.stringify(alunoObj); //convertendo o obj JS para um JSON (formato texto)
+console.log(alunoStr);
+
+var novoAlunoObj = JSON.parse(alunoStr); //convertendo o JSON (formato texto) para um obj JS
+console.log(novoAlunoObj);
+
+</script>

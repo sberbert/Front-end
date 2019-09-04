@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script> 	 
+
+        //forma 1 - ruim, pois acessa o elemento 3 vezes - faz 3 consultas por todo o documento para chegar no mesmo elemento.
+		/*
+		jQuery(document).ready(function() {	        
+			$('#meuElemento').text('Cotil');
+			$('#meuElemento').css('color', 'red');
+			$('#meuElemento').css('background', 'lightblue');
+		});     
+		*/
+
+		//forma 2 - melhoria - armazena o elemento em uma variável 
+		/*
+		jQuery(document).ready(function() {	
+			var meuElemento = $('#meuElemento');
+			meuElemento.text('Cotil');
+			meuElemento.css('color', 'red');
+			meuElemento.css('background', 'lightblue');
+		});   	
+		*/
+
+		//forma 3 - melhoria - encadeamento de métodos
+		/*
+		jQuery(document).ready(function() {	
+			$('#meuElemento')
+				.text('Cotil')
+				.css('color', 'red')
+				.css('background', 'lightblue');
+		});   	
+		*/
+
+		//forma 4 - melhoria final - para evitar acessar o elemento "css" 2 vezes, passaremos um objeto com tudo o que queremos alterar de uma vez só
+		jQuery(document).ready(function() {	
+			$('#meuElemento')
+			    .text('Cotil')
+			    .css({
+			        'color': 'red',
+			        'background': 'lightblue'
+			    })
+		});   							
+		
+    </script>
+</head>
+
+<body>
+
+    <div id="meuElemento">COTIL - UNICAMP</div>
+	
+</body>
+
+</html>

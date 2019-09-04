@@ -1,0 +1,46 @@
+<!---
+
+O nome COTIL acabou de fugir do nosso banco de palavras, e achamos que ela se esconde dentro da string que está salva na variável texto.
+
+Nos ajude a encontrá-la ?
+
+-->
+
+<!doctype html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Concatenação</title>
+    
+    <script> 
+
+    var texto = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis justo dolor. Nulla facilisi. Vestibulum finibus eu justo eget elementum. Curabitur molestie ullamcorper risus, a eleifend magna. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibust COTIL vestibulum. Curabitur bibendum eu est consequa maximus. Nulla facilisi. In massa nisi, vestibulum ut cursus et, congue vitae nunc. Duis nunc magna, semper ut leo sed.';
+
+  
+	  console.log(texto.indexOf('COTIL')); //busca do início par o fim
+	  console.log(texto.lastIndexOf('COTIL')); //busca do fim para o início
+	  console.log(texto.match('COTIL')); //semelhante ao index of (correspondencia), mas retorna alguns dados a mais em um vetor
+
+
+	//com vetor
+	var palavras = texto.split(' ');
+
+	console.log(palavras);
+
+	for(var i=0; i<palavras.length; i++){
+		if(palavras[i] === 'COTIL'){
+			console.log(palavras[i]);
+		}
+	}      
+
+       
+    </script>
+    
+</head>
+<body>
+
+  
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>JQuery</title>
+	</head>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>        
+
+        //pode-se usar o console tb
+		jQuery(document).ready(function() {	
+
+          //função val() nos retorna o valor de um elemento (inputs). Muito parecida com a função attr(), mas é mais fácil de escrever
+		  alert($('input').val());
+
+          //pode também ser usada para inserir/alterar VALOR de um campo
+		  $('input').val(123);
+
+		  //função text() obtém o texto de elementos "textuais"
+          alert($('span').text());
+
+          //pode também ser usada para inserir/alterar TEXTO de um elemento
+		  $('span').text('Telefone:');
+
+		  //função html(), retorna o HTML de um elemento
+		  alert($('div').html());
+
+          //pode também ser usada para inserir/alterar HTML de um elemento
+		  $('span').html('<b>Telefone:</b>');
+
+		}); 
+    </script>	
+
+	<body>
+
+	<div>
+	    <span>Nome:</span>
+	    <input type="text" value="xyz" />
+	</div>
+
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<html>
+    
+<head>
+  	<title>Document</title>
+
+  	<script type="text/javascript">      
+
+	    function efetuarOperacao(operacao) {
+
+	      var valor1 = document.getElementById('valor1').value;
+	      var valor2 = document.getElementById('valor2').value;
+
+	      if ( (valor1 === "") || (valor2 === "") ) {
+	      	alert("Informe os 2 valores!");
+	      } else {
+
+ 		    var resultado;
+
+ 		    valor1 = parseFloat(valor1);
+ 		    valor2 = parseFloat(valor2);
+
+		    if (operacao == '+') {
+		      resultado = valor1 + valor2;  	    	      	
+		    } else if (operacao == '-') {
+		      resultado = valor1 - valor2;  
+		    } else if (operacao == '*') {
+		      resultado = valor1 * valor2; 
+		    } else if (operacao == '/') {
+		      resultado = valor1 / valor2; 
+		    }
+
+
+		    //document.getElementById('resultado').textContent = resultado;
+		    document.getElementById('resultado').innerHTML = "<b>" + resultado + "<b>";
+		      
+		    document.getElementById('resultado').style.color = "red";
+		    document.getElementById('resultado').style.backgroundColor = "gray";	    
+
+		    //document.getElementById('resultado').value = resultado;
+	     } //end do else
+	    } //end da function
+	    
+	  </script>
+
+</head>
+    
+<body>
+    
+<form>
+
+  Valor 1:<br>
+  <input type="text" id="valor1"> 
+
+  <br><br>
+
+  Valor 2:<br>
+  <input type="text" id="valor2"> 
+
+  <br><br>
+
+  <input type="button" value="+" onclick="efetuarOperacao('+');">
+  <input type="button" value="-" onclick="efetuarOperacao('-');">
+  <input type="button" value="*" onclick="efetuarOperacao('*');">
+  <input type="button" value="/" onclick="efetuarOperacao('/');">
+
+  <br><br>
+
+  Resultado: <span id="resultado"></span>
+
+  <!--input type="text" id="resultado" readonly-->
+
+</form>
+    
+</body>
+    
+</html>

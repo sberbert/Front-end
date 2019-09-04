@@ -1,0 +1,36 @@
+<html ng-app='AngularIntro'>
+    
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  </head>
+    
+  <body ng-controller='SimpleController'>
+    
+    <input type='text' ng-model='name'>
+    <input type='button' value='Adicionar' ng-click='addName()'>
+ 
+    <table>
+      <tr ng-repeat="pessoa in bairroDoLimoeiro">
+        <td>{{pessoa}}</td>
+      </tr>
+    </table>
+ 
+    <script>
+      //Inicialização do módulo
+      var module = angular.module('AngularIntro', []);
+ 
+      //Adição do Controller ao módulo
+      module.controller('SimpleController', function($scope){
+        $scope.bairroDoLimoeiro = ['Mônica', 'Magali', 'Cascão', 'Cebolinha'];
+ 
+        $scope.addName = function(){
+          var name = $scope.name;
+          if($scope.bairroDoLimoeiro.indexOf(name) == -1)
+            $scope.bairroDoLimoeiro.push(name);
+          $scope.name = '';
+        }
+      });
+    </script>
+ 
+  </body>
+</html>

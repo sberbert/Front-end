@@ -1,0 +1,79 @@
+<!-- 
+
+- alterando valores e atributos:
+  - document.querySelector("#myinput").value = document.getElementById("myinput")
+  - document.querySelector("#myinput").getAttribute("type") = retorna text  
+  - document.querySelector("#myinput").setAttribute("type", "number") = altera o tipo do elemento
+
+  -document.querySelector("#myinput").style.backgroundColor = "blue" - para mexer com estilo
+
+  -document.querySelector("#myinput").classList.add("my-input"); - adiciona a classe my-input ao elemento
+  -document.querySelector("#myinput").classList.contains("my-input"); - verifica se um elemento tem uma determinada classe (ret true/false)
+  -document.querySelector("#myinput").classList.remove("my-input"); - remove a classe my-input do elemento
+  -document.querySelector("#myinput").classList.toggle("my-input"); - se o elemento já tiver a classe, remove. Se não tiver, adiciona. (alterna)
+
+-->
+
+<html>
+    
+<head>
+  <title>querySelector</title>
+
+  <style type="text/css">    
+    .formatacao {      
+      color:pink;
+      font-weight: bold;
+      background-color: black;   
+    }
+  </style>
+
+  <script type="text/javascript">      
+    function alteraCampo() {
+
+      console.log(document.querySelector("#valor").getAttribute("type"));
+      console.log(document.querySelector("#valor").value);
+
+      if (document.querySelector('#Numero').checked) {
+        document.querySelector("#valor").setAttribute("type", "number");     
+        document.querySelector("#valor").style.backgroundColor = "yellow";
+
+      } else if (document.querySelector('#Texto').checked) {
+        document.querySelector("#valor").setAttribute("type", "text");  
+        document.querySelector("#valor").style.backgroundColor = "pink";      
+      }
+
+    }  
+
+    function formataPagina() {
+   
+      //verifica se um elemento tem uma determinada classe (ret true/false)
+      /*if (document.querySelector("#corpoPagina").classList.contains("formatacao")) {
+        //remove a classe my-input do elemento
+        document.querySelector("#corpoPagina").classList.remove("formatacao"); 
+      } else {
+        //adiciona a classe my-input ao elemento
+        document.querySelector("#corpoPagina").classList.add("formatacao"); 
+      }*/
+
+      //ou, mais fácil => se o elemento já tiver a classe, remove. Se não tiver, adiciona. (alterna)
+      document.querySelector("#corpoPagina").classList.toggle("formatacao"); 
+   
+    }           
+  </script>    
+
+</head>
+        
+<body id="corpoPagina">
+    
+  Número <input type="radio" name="opcao" id="Numero" value="Numero" onclick="alteraCampo();">  
+  Texto  <input type="radio" name="opcao" id="Texto" value="Texto" onclick="alteraCampo();"> 
+
+  <br><br>
+  Informe o Valor:<br>
+  <input type="text" id="valor">
+
+  <br><br>
+  <button onclick="formataPagina();">Fomata Página</button>
+    
+</body>
+</html>

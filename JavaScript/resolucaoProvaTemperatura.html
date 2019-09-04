@@ -1,0 +1,44 @@
+<html>
+    
+<head>
+  	<title>Circulo</title>
+
+	<script type="text/javascript">   
+
+	    function converterF() {          
+        var celsius =  parseInt(document.getElementById('celsius').value);
+	      document.getElementById('fahrenheit').value = 1.8*celsius+32;    
+	    }
+
+	    function converterK() {          
+          var celsius =  parseInt(document.getElementById('celsius').value);
+	        document.getElementById('kelvin').style.color = "red";
+          document.getElementById('kelvin').innerHTML = celsius+273;   
+	    }
+
+	  </script>
+
+</head>
+    
+<body>
+    
+<form>
+  Temperatura em Celsius:<br>
+  <input type="text" id="celsius"> ºC<br><br>
+
+  <input type="button" value="Converter F" onclick="converterF();">  
+  <input type="button" value="Converter K" onclick="converterK();">  
+
+  <br><br>
+  Temperatura em Fahrenheit:<br>
+  <input type="text" id="fahrenheit" readonly> ºF
+
+  <br><br>
+
+  Kelvin:<br>
+  <span id="kelvin"></span> ºK
+</form>  
+    
+</body>
+    
+</html>

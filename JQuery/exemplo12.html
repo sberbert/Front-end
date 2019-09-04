@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>JQuery</title>
+	</head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>      
+		jQuery(document).ready(function() {	
+
+			//fazer um por vez
+
+            //seleciona a lista e adiciona um parágrafo com borda antes
+			//$('ul').wrap('<p style="border: 1px solid" ></p>');
+
+			//retira o elemento pai adicionado para a lista
+			//$('ul').unwrap();
+
+            //retira o elemento pai INDICADO adicionado para a lista, se não existir, não faz nada
+			//$('ul').unwrap('p');
+
+			//adiciona o container para cada um dos elementos selecionados
+			//$('li').wrap('<p style="border: 1px solid" ></p>');
+
+			//adiciona apenas um container para todos os elementos selecionados
+			//$('li').wrapAll('<p style="border: 1px solid" ></p>');		
+
+			//mesma coisa que wrap, mas o container é criado para o conteúdo do elemento selecionado, visualmente muitas vezes não muda
+			//$('li').wrapInner('<p style="border: 1px solid" ></p>')	
+
+		}); 			
+    </script>	
+
+	<body>
+		<ul>
+		    <li>1</li>
+		    <li>2</li>
+		    <li>3</li>
+		</ul>	
+	</body>
+</html>

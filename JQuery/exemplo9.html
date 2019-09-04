@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>JQuery</title>
+	</head>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>      
+		jQuery(document).ready(function() {	
+
+ 			//forma 1 
+ 			var elemento = '<div class="formataDiv" >COTIL</div>';
+ 			$('body').html(elemento);
+ 			
+ 			//forma 2 - em objeto
+ 			/*
+			var elemento = $('<div>', {
+			    text: 'COTIL',
+			    class: 'formataDiv'
+			});
+			$('body').html(elemento); 			
+			*/
+
+            //exemplo acessando o DOM apenas qd o elemento já está definido na String, pois o acesso ao DOM é lento
+			/*
+			elemento = '<ul>';
+			for(var i = 0; i < 5; i++){
+			   elemento += `<li>${i}</li>`;
+			}
+			elemento += '</ul>';
+			$('body').html(elemento);			
+			*/
+		}); 			
+    </script>	
+
+	<body>
+
+	</body>
+</html>

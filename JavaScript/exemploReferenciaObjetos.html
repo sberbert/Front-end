@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Objetos - Referência</title>
+    
+    <script> 
+        
+        //Alterando o valor de uma propriedade
+
+        var curso = { 
+            sigla: "TI", 
+            nome: "Técnico em Informática" 
+        };
+
+       // copiando uma referência 
+       var x = curso; 
+       x.sigla = "SI"; 
+       x.nome = "Sistemas de Informação"; 
+        
+       // imprime SI 
+       console.log(curso.sigla);        
+        
+      // Sistemas de Informação
+      console.log(curso.nome);
+
+    </script>
+    
+</head>
+<body>
+  Introdução ao Javascript  - Objetos - Referência
+</body>
+</html>

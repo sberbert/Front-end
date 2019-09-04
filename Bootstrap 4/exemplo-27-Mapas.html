@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous"> 
+
+    <script src="https://use.fontawesome.com/01f6939522.js"></script>        
+
+    <style type="text/css">
+      .text-centered {
+      text-align: center;
+      }
+
+      .formataContainer {
+        border-color: pink;
+        border-style: solid;
+        border-width: 5px;
+
+        padding: 0px;
+        width: 610px;
+        height: 460px;
+      }    
+    </style>
+
+    <title>Bootstrap Intermediário - Cards</title>
+  </head>
+  <body>
+
+    <!-- Barra de navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+        <a class="navbar-brand" href="#">
+          <img src="assets/img/unicamp.GIF" style="width: 30px; height: auto;" class="d-inline-block align-top">          
+          COTIL
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuSanduiche">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+ 
+        <div class="collapse navbar-collapse" id="menuSanduiche">
+          <ul class="navbar-nav mr-auto"> <!--classe mr-auto (margin-right:auto) faz o espaçamento automático entre cada item do menu -->
+
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="manual.html">Manual do Aluno</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Cursos</a>
+
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="informatica.html">Informática</a>
+                <a class="dropdown-item" href="mecanica.html">Mecânica</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="enfermagem.html">Enfermagem</a>
+                <a class="dropdown-item" href="qualidade.html">Qualidade</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="contato.html">Contato</a>
+            </li>
+
+          </ul>
+
+          <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>        
+      </div>
+
+    </nav>
+
+    <!-- Fim Barra de navegação -->  
+
+      <h1 style="text-align: center;" class="mt-5">Nossa localização</h1>
+
+      <div class="container formataContainer">      
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7368.865253056402!2d-47.428407210144385!3d-22.56291709046009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sRua+Paschoal+Marmo%2C+1888+-+Jardim+Nova+Italia%2C+Limeira+-+SP!5e0!3m2!1spt-BR!2sbr!4v1493684966363" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div> 
+
+      <p style="text-align: center;">    
+        <i class="fa fa-building-o" aria-hidden="true"></i> R. Paschoal Marmo, 1888 - Jd. Nova Itália - Limeira/SP - CEP: 13484-332<br>
+        <i class="fa fa-phone" aria-hidden="true"></i> (19) 2113-3300<br>
+        <i class="fa fa-facebook-square" aria-hidden="true"></i> Cotil-Limeira-275806726129662
+      </p>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script> 
+
+  </body>
+</html>

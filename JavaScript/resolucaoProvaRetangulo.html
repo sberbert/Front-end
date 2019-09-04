@@ -1,0 +1,48 @@
+<html>
+    
+<head>
+  	<title>Retangulo</title>
+
+	<script type="text/javascript">   
+
+	    function calcArea() {
+          var base =  parseInt(document.getElementById('base').value);
+          var altura =  parseInt(document.getElementById('altura').value);
+	      document.getElementById('area').value = base * altura;    
+	    }
+
+	    function calcPerimetro() {
+          var base =  parseInt(document.getElementById('base').value);
+          var altura =  parseInt(document.getElementById('altura').value);
+	      document.getElementById('perimetro').value = 2*(base + altura);     
+	    }
+
+	  </script>
+
+</head>
+    
+<body>
+    
+<form>
+  Base:<br>
+  <input type="text" id="base"><br><br>
+
+  Altura:<br>
+  <input type="text" id="altura"><br><br>
+
+  <input type="button" value="Área" onclick="calcArea();">  
+  <input type="button" value="Perímetro" onclick="calcPerimetro();">  
+
+  <br><br>
+  Área:<br>
+  <input type="text" id="area" readonly>  
+
+  <br><br>
+
+  Perímetro:<br>
+  <input type="text" id="perimetro" readonly>    
+</form>  
+    
+</body>
+    
+</html>

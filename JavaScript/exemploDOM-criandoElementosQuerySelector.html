@@ -1,0 +1,45 @@
+<!-- 
+
+ - var myLi = document.createElement('li');
+  - myLi.innerText = "teste"; => <li>teste</i>
+
+  - document.querySelector("div").appendChild(myLi);
+
+-->
+
+<html>
+    
+<head>
+  <title>querySelector</title>
+    
+   <script type="text/javascript">
+       
+    function add() {      
+      var texto = document.querySelector("#texto").value; 
+      var myLi = document.createElement('li');
+      myLi.innerText = texto;
+      document.querySelector("ul").appendChild(myLi);
+    }
+        
+  </script>   
+    
+</head>
+        
+<body>
+
+  Adicionando elementos com querySelector
+    
+  <ul>
+    <li>1INFN</li>
+    <li>2INFN</li>
+    <li>3INFN</li>
+  </ul>
+    
+  <br>
+  Turma: <br>
+  <input type="text" id="texto">    
+  <button type="button" onclick="add();">+</button>
+    
+
+</body>
+</html>

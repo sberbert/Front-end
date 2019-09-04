@@ -1,0 +1,31 @@
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: red;
+}
+
+a:hover {
+  font-size: 17px;
+  text-decoration: underline;
+  color: blue;
+}
+
+a:active {
+  text-decoration: none;
+  color: green;
+}
+
+
+p:hover {
+  font-size: 17px;
+  font-weight: bold;
+  color: blue;
+}
+
+input:focus {
+  background-color: #C7E9CF;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>JQuery</title>
+	</head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>      
+		jQuery(document).ready(function() {
+
+			//executar um por vez 
+
+            //remove todos os elementos selecionados
+			//$('li').remove();
+
+			//remve o primeiro elemento e o remove
+			//$('li').first().remove();
+
+			//limpa/esvazia os elementos selecionados
+			//$('li').empty();
+
+			//parecido com remove(), mas o detach() mantém os dados, que podem ser recuperados com funções como appendTo()
+			//var myElement = $('li').detach();
+			//myElement.appendTo('ul');
+		}); 			
+    </script>	
+
+	<body>
+		<ul>
+		    <li>1</li>
+		    <li>2</li>
+		    <li>3</li>
+		</ul>	
+	</body>
+</html>

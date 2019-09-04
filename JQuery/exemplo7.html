@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>JQuery</title>
+	</head>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>        
+        //pode-se usar o console tb
+		jQuery(document).ready(function() {	
+
+			//função attr() - recebe o nome do elemento e do atributo que queremos obter o valor.	      
+			alert($('#feminino').attr('checked'));
+			alert($('#masculino').attr('checked'));
+
+			//função attr() também pode alterar ou inserir o valor de um atributo em um elemento - pelo inspecionador de elementos vc irá verificar que o elemento tem um novo atributo title
+			$('#feminino').attr('title', 'Opcao Feminino');
+
+			//função removeAttr() - remove um atributo de um elemento no proprio html - retirará o checked, o que desmarcará o input
+			$('#feminino').removeAttr('checked');
+
+			//função prop() funciona de forma semelhante a attr(), mas para ler, inserir ou alterar o valor de uma propriedade. Nesse ex retorna true se a propriedade existir e false se ela não existir
+			alert($('#feminino').prop('checked'));
+
+			//podemos alterar o valor da propriedade, sem retirar do html, como acontece no removeAttr
+			$('#masculino').prop('checked', true);
+
+			//Cria uma propriedade
+			$('#masculino').prop('myProperty', 123);
+			alert($('#masculino').prop('myProperty'));
+
+			//remove a propriedade criada - cuidado para não remover propriedades nativas dos elementos, pois após removida não é possíve recriá-la
+			$('#masculino').removeProp('myProperty');
+			alert($('#masculino').prop('myProperty'));
+
+		}); 
+    </script>	
+
+	<body>
+
+	  <div class="div1" >COTIL</div><br>
+
+      <!-- digite no console do navegador o comando abaixo       
+      document.getElementsByClassName('div1');
+      -->
+
+	  Sexo:<br>
+	  F <input id="feminino" name="sexo" type="checkbox" checked="checked">
+	  M <input id="masculino" name="sexo" type="checkbox">
+
+	</body>
+</html>

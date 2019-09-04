@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+    
+    <script type="text/javascript">
+
+        var regex_emailValido = /^(\w+[._-]?)+@\w+(\w+[.]?)+$/; //ailton.santos@email.com
+        var regex_telefoneValido = /^\d{5}-\d{4}$/; // 98765-8765
+        
+        function validar() {
+        
+          //validando email    
+          var email = document.getElementById("email").value;       
+          
+          if (regex_emailValido.test(email)) {
+            alert("email válido");
+          } else {
+            alert("email inválido");  
+          }
+            
+          //validando telefone    
+          var telefone = document.getElementById("telefone").value;       
+          
+          if (regex_telefoneValido.test(telefone)) {
+            alert("telefone válido");
+          } else {
+            alert("telefone inválido");  
+          }
+            
+        }
+        
+    </script>
+
+    
+</head>
+<body>
+
+    <form>
+      e-mail:<br>
+      <input type="text" id="email">
+        
+      <br><br>
+      Telefone:<br>
+      <input type="text" id="telefone">
+        
+      <br><br>  
+      <input type="button" id="btnOk" value="Ok" onclick="validar();">          
+        
+    </form>
+
+
+</body>
+</html>

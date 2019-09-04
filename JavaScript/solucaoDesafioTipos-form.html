@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Conversão</title>
+    
+    <script>   
+
+    function somar() {
+
+	  var valor1 = document.getElementById("valor1").value;
+	  var valor2 = document.getElementById("valor2").value;
+
+	  var soma = parseInt(valor1) + parseInt(valor2);
+
+	  document.getElementById("resultado").value = soma;
+
+    }
+
+	</script>
+
+</head>
+<body>
+  
+  Valor 1:<br>
+  <input type="text" id="valor1">
+
+  <br><br>
+
+  Valor 2:<br>
+  <input type="text" id="valor2">
+
+  <br><br>
+
+  Resultado:<br>
+  <input type="text" id="resultado">
+
+  <br><br>
+
+  <input type="button" value="Somar" onclick="somar();">
+
+
+</body>
+</html>	
+

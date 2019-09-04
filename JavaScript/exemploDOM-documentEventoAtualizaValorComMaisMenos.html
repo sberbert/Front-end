@@ -1,0 +1,32 @@
+<html>
+    
+<head>
+  <title>Document</title>
+</head>
+    
+<body>
+    
+
+<form>
+  <span id="resultado">0</span>
+  <input type="button" value="+" onclick="somar()">
+  <input type="button" value="-" onclick="sub()">  
+</form>
+    
+ 
+<script type="text/javascript">      
+
+    function somar() {
+      document.getElementById('resultado').innerHTML = parseInt(document.getElementById('resultado').innerHTML)+1;    
+    }
+    
+    function sub() {
+      document.getElementById('resultado').innerHTML = parseInt(document.getElementById('resultado').innerHTML)-1;    
+    }    
+    
+      
+  </script>
+    
+</body>
+    
+</html>

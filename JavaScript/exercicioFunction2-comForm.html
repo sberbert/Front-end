@@ -1,0 +1,44 @@
+<script type="text/javascript">
+
+    
+/* --- solução 1 --- com alert */
+function validarIdade(idade) {
+	if (idade >= 18) {
+		alert('Maior de idade');		
+	} else {
+		alert('Menor de idade');		
+	} 
+}
+
+/* --- solução 2 --- com span */
+/*function validarIdade(idade) {
+
+	var msg = document.getElementById("msg");
+
+	if (idade >= 18) {		
+		msg.innerHTML = "Maior de idade";
+	} else {		
+		msg.innerHTML = "Menor de idade";
+	} 
+}*/
+
+</script>
+
+<html>
+  
+    <body>
+
+      <form>
+      
+	      Idade:<br>
+	      <input type="text" name="idade">
+	      <input type="button" value="Verificar" onclick="validarIdade(this.form.idade.value);">
+
+	      <!-- para soluçao2 
+	      <span id="msg"></span>
+	      -->
+
+      </form>
+
+    </body>
+</html>

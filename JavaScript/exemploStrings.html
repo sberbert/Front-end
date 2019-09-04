@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Concatenação</title>
+    
+    <script> 
+
+      var texto = 'UNICAMP';
+      console.log("-------charAt()--------");   
+      console.log(texto.charAt(0));           
+        
+      console.log("-------Split()-------");         
+      texto = "COTIL-UNICAMP-LIMEIRA"; 
+      var aux = texto.split("-"); 
+
+      for(var i=0; i<aux.length; i++){        
+        console.log(aux[i]);        
+      }
+
+      /*console.log(aux[0]); 
+      console.log(aux[1]);   
+      console.log(aux[2]);*/
+
+      console.log("-------indexOf-------");         
+      texto.indexOf('LIMEIRA') 
+ 
+      console.log("-------Slice()-------");        
+      console.log(texto.slice(0,3));
+        
+    </script>
+    
+</head>
+<body>
+
+  Strings
+
+</body>
+</html>

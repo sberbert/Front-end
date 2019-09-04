@@ -1,0 +1,46 @@
+<html ng-app='AngularIntro'>
+    
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  </head>
+    
+  <body ng-controller='SimpleController'>
+    
+    <input type='text' ng-model='name'>
+    <input type='button' value='Adicionar' ng-click='addName()'>
+ 
+    <table>
+      <tr>
+        <th>Bairro do Limoeiro</th>
+      </tr>
+      <tr ng-repeat="pessoa in bairroDoLimoeiro">
+        <td>{{pessoa}}</td>
+      </tr>
+    </table>
+ 
+    <script>
+      var module = angular.module('AngularIntro', []);
+      
+      module.factory('simpleService', function(){
+        var service = {};
+        service.nameList = ['Mônica', 'Magali', 'Cascão', 'Cebolinha']; 
+ 
+        service.addName = function(name){
+          if(service.nameList.indexOf(name) == -1)
+            service.nameList.push(name); 
+        }
+ 
+        return service;
+      })
+ 
+      module.controller('SimpleController', function($scope, simpleService){
+        $scope.bairroDoLimoeiro = simpleService.nameList; 
+        $scope.addName = function(){
+          simpleService.addName($scope.name);
+          $scope.name = '';
+        }
+      });
+    </script>
+ 
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>JQuery</title>
+	</head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>      
+		jQuery(document).ready(function() {	
+
+            //insere um elemento após o 1o
+			//$('li').first().after('<li>1.5</li>');
+
+            //insere um elemento após cada li
+			//$('li').after('<li>*</li>');			
+
+			//insere um elemento antes do último
+			//$('li').last().before('<li>2.5</li>');
+
+			//insere um elemento após cada li
+			//$('li').after('<li>#</li>');			
+
+			//insere um elemento após cada elemento li - apenas sintaxe diferente
+			//$('<li> - </li>').insertAfter('li');
+
+			//insere um elemento antes cada elemento li - apenas sintaxe diferente
+			//$('<li> - </li>').insertBefore('li');			
+
+		}); 			
+    </script>	
+
+	<body>
+		<ul>
+		    <li>1</li>
+		    <li>2</li>
+		    <li>3</li>
+		</ul>	
+	</body>
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Concatenação</title>
+    
+    <script> 
+
+        var nomes = ['Felipe']; // declarando um Array na forma literal
+
+        console.log("--------------------");
+        console.log(nomes);
+        console.log(nomes.length); // length retorna o tamanho da lista que nesse caso é 1
+        
+        nomes.push('Kennedy'); // um novo nome foi adicionado a lista que agora contem 'Felipe' e 'Kennedy'
+
+        console.log("--------------------");
+        console.log(nomes);
+        console.log(nomes.length) //tamanho igual a 2
+
+        nomes.push(12); // repare que 12 não é do tipo string mas mesmo assim o código rodou
+
+        console.log("--------------------");
+        console.log(nomes);
+        console.log(nomes.length); //agora o tamanho da lista é 3 ['Felipe', 'Kennedy', 12]
+
+        console.log("--------------------");
+        console.log(typeof nomes); // retorna object
+        
+        console.log("---------for---------");        
+        
+        for(var i = 0; i < nomes.length; i++) { 
+            console.log(nomes[i]); 
+        }
+        
+        delete nomes[1]; 
+        
+        console.log("---------for após delete---------");      
+        for(var i = 0; i < nomes.length; i++) { 
+            console.log(nomes[i]); 
+        }   
+        
+        var nome = nomes.pop();    
+        console.log("Elemento removido: " + nome); 
+        
+        console.log("---------for após pop---------");  
+        for(var i = 0; i < nomes.length; i++) { 
+            console.log(nomes[i]); 
+        }       
+        
+        nomes[1] = 'Simone'; //adicionando valor direto a uma posição
+        
+        console.log("---------for após novo valor ---------");          
+        for(var i = 0; i < nomes.length; i++) { 
+            console.log(nomes[i]); 
+        }          
+                
+        nomes.unshift("Maria"); //adicionando elemento na 1a posição do array
+        
+        console.log("---------array após novo elemento na 1a posição ---------");     
+        console.log(nomes);
+        
+        nome = nomes.shift(); //removendo e retornando o 1o elemento de em array   
+        console.log("Elemento removido: " + nome); 
+        
+        console.log("---------array após remover elemento na 1a posição ---------");     
+        console.log(nomes);    
+        
+                
+        //concatenando arrays - juntando em um só        
+        var tecnico = ["TP", "BD", "EG"]; 
+        var medio = ["Matemática", "Português", "Biologia"]; 
+        var formacaoCompleta = tecnico.concat(medio); 
+        
+        console.log("---------Arrays concatenados---------");    
+        for(var i = 0; i < formacaoCompleta.length; i++) {
+            console.log(formacaoCompleta[i]); 
+        }        
+                
+        //gerando String com elementos do array "tecnico"        
+        var stringResultante = tecnico.join("-"); 
+        console.log("---- String resultante = " + stringResultante);  
+        
+        //Copiando um pedaço do array
+        var formacaoBasica = medio.slice(0, 2); 
+        console.log("---- formacaoBasica = " + formacaoBasica);  
+        
+        //invertendo os elementos do array
+        tecnico.reverse();  
+        console.log("----Array invertido----");  
+        console.log(tecnico);
+        
+        //criando array de array
+        var multidimencional = [[1,2,3],[4,5,6],[7,8,9]]; 
+        console.log("----Array de Array----");  
+        console.log(multidimencional);     
+        
+        //criando array, definindo o tamanho
+        var a = new Array(10);
+        
+        a[0] = "xyz";
+        console.log(a);
+    </script>
+    
+</head>
+<body>
+
+  Arrays
+
+</body>
+</html>

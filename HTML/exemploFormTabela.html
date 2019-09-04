@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+    
+  <head>
+    <meta charset="utf-8">
+    <title>Formulário em Tabela</title>
+  </head>	
+    
+  <body>
+
+    <form>
+    <table border="0" cellspacing="5" cellpadding="5">
+        <tr>
+            <td colspan="3">
+              Nome:<br>
+              <input type="text" name="nome" size="55"> 
+            </td>
+            <td colspan="2">
+              Espécie:<br>
+              <select>
+                  <option>Canina</option>
+                  <option>Felina</option>
+              </select>                 
+            </td>
+        </tr>
+        <tr>
+            <td>
+              Raça:<br>
+              <input type="text" name="raça"> 
+            </td>
+            
+            <td>
+              Sexo:<br>
+              <input type="radio" name="sexo">M
+              <input type="radio" name="sexo">F
+            </td>
+
+            <td>
+              Peso Atual:<br>
+              <input type="number" name="peso"> 
+            </td>   
+            
+            <td>
+              Data Nascimento:<br>
+              <input type="date" name="datanasc"> 
+            </td> 
+            
+                                                                               <td>
+              Cor:<br>
+              <input type="color" name="cor"> 
+            </td>                                                           </tr>
+        
+        <tr>
+            <td>
+             Vacinas:<br>
+             <input type="checkbox" name="multipla">
+             Múltipla<br>                
+             <input type="checkbox" name="Para">Parainfluenza<br>
+             <input type="checkbox" name="Giar">Giardíase<br>
+             <input type="checkbox" name="AntiR">Anti-Rábica
+            </td>
+            
+            <td colpspan="4">
+             Última aplicação:<br>
+             <input type="date" name="dataMul"><br>
+             <input type="date" name="dataPara"><br>
+             <input type="date" name="dataGiar"><br>
+             <input type="date" name="dataAnti">
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="5">
+                Outras características/informações:<br>
+                <textarea cols="100" rows="5"></textarea>
+            </td>            
+        </tr>
+    </table> 
+    </form>
+    
+  </body>
+    
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Layout Flexivel - Formula</title>
+    
+    <style type="text/css">
+        
+        .no-margin-right { /* classe genérica para zerar a margem direita */
+            margin-right: 0;
+        }
+        
+        .main {
+          margin: 0 auto;
+          width: 72%; /* ~ 960px */;
+        }  
+        
+        .container {
+          float: left;
+          margin-right: 3.125%; /* 30 / 960 */
+          width: 29.16666666666667%; /* 280 / 960 */
+        }
+
+        .news .title {
+          font-size: 1.5625em; /* 25 / 16 ("convenção" de 16px) */
+          margin: 0;
+        }
+
+        .news .intro {
+          font-size: 1em; /* 16 / 16 */
+        }
+        
+        .news .more {
+            float: right;
+        }
+        
+        @media only screen and (max-width: 640px) {
+          .container {
+            float: none;
+            width: 100%;
+          }
+
+          .news .more {
+            float: none;
+          }
+        }        
+        
+    </style>     
+</head>
+    
+<body>
+
+    <div class="main">
+        <article class="container">
+            <section class="news">
+                <h1 class="title">Lorem ipsum dolor sit amet, consectetur</h1>
+                <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo ex!</p>
+                <a href="#" class="more">Lorem ipsum</a>
+            </section>
+        </article>
+
+        <article class="container">
+            <section class="news">
+               <h1 class="title">Lorem ipsum dolor sit amet, consectetur</h1>
+                <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo ex!</p>
+                <a href="#" class="more">Lorem ipsum</a>
+            </section>
+        </article>
+
+        <article class="container no-margin-right">
+            <section class="news">
+                <h1 class="title">Lorem ipsum dolor sit amet, consectetur</h1>
+                <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo ex!</p>
+                <a href="#" class="more">Lorem ipsum</a>
+            </section>
+        </article>
+    </div>
+
+</body>
+</html>

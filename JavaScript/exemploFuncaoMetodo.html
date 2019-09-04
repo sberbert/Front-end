@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Function - Método</title>
+    
+    <script> 
+
+      //criando objeto com atributos e método
+      var conta = { 
+          saldo: 0, 
+          deposita: function(valor) { 
+              this.saldo += valor; 
+          } 
+      } 
+      
+      //executando o método deposita do objeto conta
+      conta.deposita(100); 
+      alert(conta.saldo);
+
+    </script>
+    
+</head>
+<body>
+
+  Function
+
+</body>
+</html>

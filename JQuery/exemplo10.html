@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>JQuery</title>
+	</head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>      
+		jQuery(document).ready(function() {	
+			var novoItem = '<li>4</li>';
+
+			//apend() adiciona o elemento como último filho do elemento selecionado
+			$('ul').append(novoItem);
+			
+            //prepend() adiciona o elemento como primeiro filho do elemento selecionado
+			$('ul').prepend('<li>0</li>');
+
+            //appendTo() e prependTo() fazem a mesma coisa de append() e prepend(), apenas com sintaxe diferente
+			$(listItem).appendTo('ul');
+			$('<li>0</li>').prependTo('ul');
+		}); 			
+    </script>	
+
+	<body>
+		<ul>
+		    <li>1</li>
+		    <li>2</li>
+		    <li>3</li>
+		</ul>	
+	</body>
+</html>
